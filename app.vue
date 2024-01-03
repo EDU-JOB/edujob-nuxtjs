@@ -1,0 +1,11 @@
+<template>
+  <header>
+  <h1>Header</h1>
+  </header>
+  <div>
+  <NuxtLayout/>
+  </div>
+  <footer>
+  <h1>Footer</h1>
+  </footer>
+</template>
