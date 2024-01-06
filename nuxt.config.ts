@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/tailwindcss",
     "radix-vue/nuxt",
-    "@element-plus/nuxt"
+    "@element-plus/nuxt",
+    "@nuxt/image"
   ],
   app: {
     head: {
@@ -50,7 +51,7 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      API_BASE_URL: "DEMO"
+      API_BASE_URL: "---"
     }
   },
   vite: {
@@ -70,5 +71,19 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
     strict: true
+  },
+  image: {
+    inject: true,
+    domains: ["https://pixum.photos"],
+    format: ["webp"],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      "2xl": 1536
+    }
   }
 });

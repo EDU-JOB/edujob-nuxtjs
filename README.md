@@ -1,6 +1,76 @@
-# Nuxt 3 Minimal Starter
+# EDUJOB - NUXTJS 
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# For tasks
+
+- https://github.com/orgs/EDU-JOB/projects/1
+
+# Main
+
+- Try to keep pages server component;
+- Use BEM
+- Use FC generic for Component
+- Use the same node version (v21.4.0)
+
+# Imports order
+
+- Nuxt components and utils
+- Nuxt / Vue3
+- Third libraries
+- Vue components
+- Utils
+- Style
+
+# Layouts
+
+- default.vue
+
+
+
+# Pages
+
+- Pages are stored in the app folder
+- Naming -> JobsPage, JobPage
+
+# Files
+
+ File naming is `kebab-case` 
+
+- User.vue => bad
+- user.vue => good
+
+<br />
+
+- loginCard.vue => bad
+- LoginCard.vue => bad
+- login-card.vue => good
+
+# Components
+
+- Creating component
+  ```
+  modal
+    index.vue
+    style.scss
+
+  ```
+- Component naming is PascalCase
+
+  ```
+    <UserComponent />
+  ```
+- Component is made without margin
+
+# Plugins
+
+ Plugin naming is camelCase
+
+  ```
+    useFetch
+  ```
+
+# Variables
+
+ Sass folder -> variables.scss
 
 ## Setup
 
