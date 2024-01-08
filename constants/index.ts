@@ -34,3 +34,104 @@ export const languageSwitcherData = [
     img: "/flags/uzb-flag.png",
   },
 ];
+
+export const footerLink = [
+  {
+    title: "Quick Link",
+    links: [
+      {
+        path: "/",
+        title: "About",
+      },
+      {
+        path: "/",
+        title: "Contact",
+      },
+      {
+        path: "/",
+        title: "Pricing",
+      },
+      {
+        path: "/",
+        title: "Blog  ",
+      },
+    ],
+  },
+  {
+    title: "Candidate",
+    links: [
+      {
+        path: "/",
+        title: "Browse Jobs",
+      },
+      {
+        path: "/",
+        title: "Browse Employers",
+      },
+      {
+        path: "/",
+        title: "Candidate Dashboard",
+      },
+      {
+        path: "/",
+        title: "Saved Jobs",
+      },
+    ],
+  },
+  {
+    title: "Employers",
+    links: [
+      {
+        path: "/",
+        title: "Post a Job",
+      },
+      {
+        path: "/",
+        title: "Browse Candidates",
+      },
+      {
+        path: "/",
+        title: "Employers Dashboard",
+      },
+      {
+        path: "/",
+        title: "Applications",
+      },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      {
+        path: "/",
+        title: "Faqs",
+      },
+      {
+        path: "/",
+        title: "Privacy Policy",
+      },
+      {
+        path: "/",
+        title: "Terms & Conditions",
+      },
+    ],
+  },
+];
+export const footerSocial = [
+  {
+    icon: "/icons/facebook.svg",
+    path: "/",
+  },
+  {
+    icon: "/icons/youtube.svg",
+    path: "/",
+  },
+  {
+    icon: "/icons/instagram.svg",
+    path: "/",
+  },
+  {
+    icon: "/icons/twitter.svg",
+    path: "/",
+  },
+];

@@ -12,7 +12,7 @@
             ><img src="/icons/PhoneCall.svg" alt="" />
             <span>+99875-555-01-78</span>
           </a>
-          <LanguageSwitcher/>
+          <LanguageSwitcher />
         </div>
       </div>
     </div>

@@ -48,8 +48,15 @@ header .main-header {
 header .main-header .logo-wrapper {
   display: flex;
   align-items: center;
+  padding: 20px 0;
 }
 header .main-header .logo-wrapper div {
   display: flex;
   align-items: center;
+}
+header .main-header .logo-wrapper .search-wrapper {
+  margin: 0 0 0 32px;
+  padding: 8px 24px;
+  border: 1px solid #e4e5e8;
+  border-radius: 5px;
 }/*# sourceMappingURL=index.css.map */
