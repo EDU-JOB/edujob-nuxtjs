@@ -7,7 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import { navlink } from "../constants";
 import type {NavLinkType} from "../types"
 
 const data = ref<NavLinkType>({
