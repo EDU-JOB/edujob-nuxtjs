@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "radix-vue/nuxt",
     "@element-plus/nuxt",
     "@nuxt/image",
+    'nuxt-swiper'
   ],
   // i18n: {
   //   locales: ["ru", "uz", "en"],

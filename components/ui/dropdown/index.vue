@@ -59,7 +59,7 @@ const target = ref(null);
 const onOpen = () => {
   state.value = !state.value;
 };
-const onSelect = (element) => {
+const onSelect = (element:any) => {
   emit("on-click", element);
   state.value = false;
 };
