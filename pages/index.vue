@@ -47,12 +47,19 @@
   <SectionsVacancy :options="vacansyList" />
   <SectionsWork :options="workCardList" />
   <SectionsDirections />
-  <SectionsClientTestimonial/>
+  <SectionsCompany />
+  <SectionsClientTestimonial :options="mainSwiperData" />
+  <SectionsRegisterCard />
 </template>
 
 <script setup lang="ts">
 import type { NavLinkType } from "../types";
-import { directionsCard, vacansyList, workCardList } from "@/constants/index";
+import {
+  directionsCard,
+  vacansyList,
+  workCardList,
+  mainSwiperData,
+} from "@/constants/index";
 
 const jobTitle = ref("");
 const address = ref("");
