@@ -47,6 +47,7 @@
   <SectionsVacancy :options="vacansyList" />
   <SectionsWork :options="workCardList" />
   <SectionsDirections />
+  <SectionsJob />
   <SectionsCompany />
   <SectionsClientTestimonial :options="mainSwiperData" />
   <SectionsRegisterCard />
