@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center h-10 rounded-lg transition-all duration-300 ease-in-out"
+    class="flex items-center transition-all duration-300 ease-in-out"
     :class="{ '!border-red-600': error }"
   >
     <slot name="prefix"></slot>

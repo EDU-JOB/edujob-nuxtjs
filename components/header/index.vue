@@ -10,6 +10,8 @@
         <div class="">
           <a href="tel:+998755550178"
             ><img src="/icons/PhoneCall.svg" alt="" />
+
+            <i class="icon-twitter-1"></i>
             <span>+99875-555-01-78</span>
           </a>
           <LanguageSwitcher />
@@ -28,6 +30,7 @@
           />
           <div class="search">
             <Input
+              type="text"
               v-model="search"
               class="ml-5 w-[400px]"
               input-class="!p-0 m-0"

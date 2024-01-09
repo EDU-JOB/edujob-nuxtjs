@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?j81hgj');
-  src:  url('fonts/icomoon.eot?j81hgj#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?j81hgj') format('truetype'),
-    url('fonts/icomoon.woff?j81hgj') format('woff'),
-    url('fonts/icomoon.svg?j81hgj#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?19jh30');
+  src:  url('fonts/icomoon.eot?19jh30#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?19jh30') format('truetype'),
+    url('fonts/icomoon.woff?19jh30') format('woff'),
+    url('fonts/icomoon.svg?19jh30#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,45 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-BellRinging:before {
-  content: "\e94e";
-}
-.icon-BookmarkSimple:before {
-  content: "\e94f";
-}
-.icon-briefcase-duotone-1-1:before {
-  content: "\e950";
-  color: #0a65cc;
-}
-.icon-briefcase-duotone-1:before {
-  content: "\e951";
-  color: #0a65cc;
-}
-.icon-buildings-duotone-1:before {
-  content: "\e952";
-  color: #fff;
-}
-.icon-CalendarBlank:before {
-  content: "\e953";
-}
-.icon-chart-bar-horizontal-duotone-1:before {
-  content: "\e954";
-  color: #0a65cc;
-}
-.icon-circle-wavy-check-duotone-1:before {
-  content: "\e955";
-  color: #0a65cc;
-}
-.icon-code-duotone-1:before {
-  content: "\e956";
-}
-.icon-Crosshair:before {
-  content: "\e957";
-}
-.icon-database-duotone-1:before {
-  content: "\e958";
-  color: #fff;
-}
 .icon-Employers-Logo-1 .path1:before {
   content: "\e959";
   color: rgb(251, 187, 0);
@@ -106,63 +67,9 @@
   margin-left: -1em;
   color: rgb(241, 67, 54);
 }
-.icon-Envelope:before {
-  content: "\e962";
-}
-.icon-fi_arrow-right-1:before {
-  content: "\e963";
-}
-.icon-fi_arrow-right:before {
-  content: "\e964";
-}
-.icon-fi_chevron-down:before {
-  content: "\e965";
-}
-.icon-fi_map-pin:before {
-  content: "\e966";
-}
-.icon-fi_search:before {
-  content: "\e967";
-}
-.icon-first-aid-kit-duotone-1:before {
-  content: "\e968";
-  color: #0a65cc;
-}
 .icon-instagram-1:before {
   content: "\e969";
   color: #767f8c;
-}
-.icon-LinkSimple:before {
-  content: "\e96a";
-}
-.icon-magnifying-glass-plus-duotone-1:before {
-  content: "\e96b";
-  color: #0a65cc;
-}
-.icon-MapTrifold:before {
-  content: "\e96c";
-}
-.icon-megaphone-simple-duotone-1:before {
-  content: "\e96d";
-  color: #0a65cc;
-}
-.icon-monitor-play-duotone-1:before {
-  content: "\e96e";
-  color: #0a65cc;
-}
-.icon-music-notes-duotone-1:before {
-  content: "\e96f";
-  color: #0a65cc;
-}
-.icon-pen-nib-duotone-1:before {
-  content: "\e970";
-  color: #0a65cc;
-}
-.icon-PhoneCall:before {
-  content: "\e971";
-}
-.icon-Sliders:before {
-  content: "\e972";
 }
 .icon-Social-icon-1 .path1:before {
   content: "\e973";
@@ -181,37 +88,17 @@
   content: "\e976";
   color: #0a65cc;
 }
-.icon-Stack-1:before {
-  content: "\e977";
-}
-.icon-Stack:before {
-  content: "\e978";
-}
 .icon-star-5:before {
   content: "\e979";
   color: #fa0;
-}
-.icon-Timer:before {
-  content: "\e97a";
 }
 .icon-twitter-1:before {
   content: "\e97b";
   color: #767f8c;
 }
-.icon-user-plus-duotone-1:before {
-  content: "\e97c";
-  color: #0a65cc;
-}
-.icon-users-duotone-1:before {
-  content: "\e97d";
-  color: #0a65cc;
-}
 .icon-Vector-6:before {
   content: "\e97e";
   color: #767f8c;
-}
-.icon-Wallet:before {
-  content: "\e97f";
 }
 .icon-youtube-1 .path1:before {
   content: "\e980";
