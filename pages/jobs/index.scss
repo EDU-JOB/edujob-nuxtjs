@@ -1,0 +1,48 @@
+@import "@/assets/scss/variables/variables";
+
+.jobs{
+
+    &__tab{
+        padding: 24px 0;
+        background-color: $bg-color-jobstab;
+    }
+
+    &__title{
+        color: #18191C;
+        font-size: 18px;
+        font-family: Inter;
+        font-weight: 500;
+        line-height: 28px;
+        word-wrap: break-word
+    }
+
+    &__navi{
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__navi-link{
+        color: #767F8C;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        word-wrap: break-word
+    }
+
+    &__list{
+        margin-top: 48px;
+        margin-bottom: 38px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+.active{
+    margin-left: 5px;
+    color: #18191C;
+}

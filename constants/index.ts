@@ -3,3 +3,12 @@ export const navlink = {
   path: "/",
   icon: "bx bx-navicon"
 };
+
+// export const obj = [
+//   {
+//     title:  "",
+//     category:  "", 
+//     salary:  "",
+//     img:  "@/assets/images/",
+// },
+// ]
