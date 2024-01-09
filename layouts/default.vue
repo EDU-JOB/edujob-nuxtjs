@@ -1,11 +1,22 @@
 <template>
-  <div>
-  <Header/>
-     <slot />
-    <Footer/>
+  <div class="wrapper">
+    <Header />
+    <div class="slot">
+      <slot />
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script setup lang="ts"></script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .slot {
+    flex-grow: 1;
+  }
+}
+</style>
