@@ -1,0 +1,87 @@
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  box-shadow: 0px 8px 24px rgba(0, 44, 109, 0.04);
+  border-radius: 8px;
+  border: 1px #E4E5E8 solid;
+}
+.input__box {
+  width: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input__box:first-child {
+  border-right: 1px #EDEFF5 solid;
+}
+.input__search {
+  width: 100%;
+  padding: 12px;
+}
+.input__search:active {
+  border: none;
+  outline: white;
+}
+.input__search-icon {
+  margin-right: 4px;
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.input__search-location {
+  margin-right: 4px;
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.input__btn-group {
+  display: flex;
+  align-items: center;
+}
+.input__btn0 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  margin-left: 24px;
+  background: #F1F2F4;
+  border-radius: 4px;
+  color: #18191C;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.input__btn-icon {
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.input__btn1 {
+  padding: 12px 24px;
+  margin-left: 12px;
+  color: white;
+  background: #0A65CC;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 24px;
+  word-wrap: break-word;
+}/*# sourceMappingURL=input.css.map */

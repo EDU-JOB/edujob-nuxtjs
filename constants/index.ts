@@ -1,6 +1,3 @@
-
-
-
 export const navLink = [
   {
     link: "/",
@@ -118,6 +115,44 @@ export const footerLink = [
         title: "Terms & Conditions",
       },
     ],
+  },
+];
+export const obj = [
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
   },
 ];
 export const footerSocial = [

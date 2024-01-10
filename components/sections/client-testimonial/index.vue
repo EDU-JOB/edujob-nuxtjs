@@ -17,6 +17,7 @@
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',
           }"
+          class="bg-transparent"
         >
           <SwiperSlide v-for="el in options" class="slide flex flex-col grow">
             <div class="flex gap-1">
@@ -113,7 +114,6 @@ section {
   width: 10px;
   height: 10px;
   transition: all 0.3s;
-
 }
 
 .clients .swiper-pagination-bullet-active {
