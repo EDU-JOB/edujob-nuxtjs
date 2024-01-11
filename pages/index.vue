@@ -9,28 +9,30 @@
           EduJob: Ma'naviy va Texnologik Rivojlanishga Qiziqarli O'qitishga
           Mo'ljallangan Dastur
         </p>
-        <div class="form">
-          <Input
-            v-model="jobTitle"
-            placeholder="Job tittle, Keyword..."
-            type="text"
-            class="form__job-input"
-          >
-            <template #prefix>
-              <img src="/icons/fi_search.svg" alt="" class="mr-3 w-6 h-6" />
-            </template>
-          </Input>
-          <Input
-            placeholder="Manzilni Kiriting"
-            v-model="address"
-            type="text"
-            class="form__address-input"
-          >
-            <template #prefix>
-              <img src="/icons/fi_map-pin.svg" alt="" class="mr-3" />
-            </template>
-          </Input>
-          <el-button type="primary" size="large">Qidirsh</el-button>
+        <div class="inline-block">
+          <div class="form">
+            <Input
+              v-model="jobTitle"
+              placeholder="Job tittle, Keyword..."
+              type="text"
+              class="form__job-input"
+            >
+              <template #prefix>
+                <img src="/icons/fi_search.svg" alt="" class="mr-3 w-6 h-6" />
+              </template>
+            </Input>
+            <Input
+              placeholder="Manzilni Kiriting"
+              v-model="address"
+              type="text"
+              class="form__address-input"
+            >
+              <template #prefix>
+                <img src="/icons/fi_map-pin.svg" alt="" class="mr-3" />
+              </template>
+            </Input>
+            <el-button type="primary" size="large">Qidirsh</el-button>
+          </div>
         </div>
         <p class="intro__directions">
           <span class="opacity-50">Yo’nalishlar</span> : Designer, Programing,

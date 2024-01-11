@@ -123,36 +123,46 @@ export const obj = [
     category: "Part-time",
     salary: "$20,000 - $25,000",
     img: "@/assets/images/logo.svg",
+    recommend:true
   },
   {
     title: "Techical Support Specialist",
     category: "Part-time",
     salary: "$20,000 - $25,000",
     img: "@/assets/images/logo.svg",
+    recommend:false
   },
   {
     title: "Techical Support Specialist",
     category: "Part-time",
     salary: "$20,000 - $25,000",
     img: "@/assets/images/logo.svg",
+    recommend:false
+
   },
   {
     title: "Techical Support Specialist",
     category: "Part-time",
     salary: "$20,000 - $25,000",
     img: "@/assets/images/logo.svg",
+    recommend:false
+
   },
   {
     title: "Techical Support Specialist",
     category: "Part-time",
     salary: "$20,000 - $25,000",
     img: "@/assets/images/logo.svg",
+    recommend:true
+
   },
   {
     title: "Techical Support Specialist",
     category: "Part-time",
     salary: "$20,000 - $25,000",
     img: "@/assets/images/logo.svg",
+    recommend:false
+
   },
 ];
 export const footerSocial = [
