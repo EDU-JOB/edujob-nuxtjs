@@ -2,9 +2,7 @@
   <section id="jobs">
     <div class="jobs__tab">
       <div class="container mx-auto flex justify-between">
-        <h2 class="jobs__title">
-          Ish O’rinlari
-        </h2>
+        <h2 class="jobs__title">Ish O’rinlari</h2>
         <div class="jobs__navi">
           <span class="jobs__navi-link">home</span>
           <span class="jobs__navi-link active">/ Jobs</span>
@@ -12,33 +10,22 @@
       </div>
     </div>
 
-    <inputCard/>
+    <inputCard />
 
     <ul class="container mx-auto jobs__list">
-
-      <nuxt-link v-for="item in obj" :key="item.title" to="/jobs/[slug].vue" slug="{name:{{item}}, params: {{ item }}}">
-        <VacancyCard item="item"/>
+      <nuxt-link
+        v-for="item in obj"
+        :key="item.title"
+        :to="{ params: { slug: item.title } }"
+      >
+        <VacancyCard :item="item" />
       </nuxt-link>
-      
     </ul>
   </section>
 </template>
 
 <script setup lang="ts">
-const obj = [
-    {
-        title:  "Techical Support Specialist",
-        category:  "Part-time", 
-        salary:  "$20,000 - $25,000",
-        img:  "@/assets/images/logo.svg",
-    },
-    {
-        title:  "Techical Support Specialist",
-        category:  "Part-time", 
-        salary:  "$20,000 - $25,000",
-        img:  "@/assets/images/logo.svg",
-    },
-]
+import { obj } from "@/constants";
 </script>
 
 <style scoped>

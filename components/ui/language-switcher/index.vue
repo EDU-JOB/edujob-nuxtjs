@@ -59,6 +59,8 @@ interface Props {
 }
 defineProps<Props>();
 
+// const currentLocale = languageSwitcherData[0]
+
 const currentLocale = computed(() =>
   languageSwitcherData.find((element) => element?.locale === locale.value)
 );

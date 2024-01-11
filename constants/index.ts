@@ -1,6 +1,3 @@
-
-
-
 export const navLink = [
   {
     link: "/",
@@ -118,6 +115,44 @@ export const footerLink = [
         title: "Terms & Conditions",
       },
     ],
+  },
+];
+export const obj = [
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
+  },
+  {
+    title: "Techical Support Specialist",
+    category: "Part-time",
+    salary: "$20,000 - $25,000",
+    img: "@/assets/images/logo.svg",
   },
 ];
 export const footerSocial = [
@@ -303,5 +338,22 @@ export const mainSwiperData = [
     job: "Photographer",
     descr:
       "“Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse et magna quis nibh accumsan venenatis sit amet id orci. Duis vestibulum bibendum dapibus.”",
+  },
+];
+
+export const registerCard = [
+  {
+    bg: "/register-bg-man.png",
+    title: "Become a Candidate",
+    descr:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus a dolor convallis efficitur.",
+    link: "/",
+  },
+  {
+    bg: "/register-bg-man.png",
+    title: "Become a Employers",
+    descr:
+      "Cras in massa pellentesque, mollis ligula non, luctus dui. Morbi sed efficitur dolor. Pelque augue risus, aliqu.",
+    link: "/",
   },
 ];

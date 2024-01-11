@@ -2,7 +2,8 @@ footer {
   background-color: #18191c;
 }
 footer .footer-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 25% 17% 17% 17% 17%;
   justify-content: space-between;
   padding: 80px 0;
 }

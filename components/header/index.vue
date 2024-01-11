@@ -8,10 +8,8 @@
           }}</nuxt-link>
         </nav>
         <div class="">
-          <a href="tel:+998755550178"
-            ><img src="/icons/PhoneCall.svg" alt="" />
-
-            <i class="icon-twitter-1"></i>
+          <a href="tel:+998755550178">
+            <!-- <img src="/icons/PhoneCall.svg" alt="" /> -->
             <span>+99875-555-01-78</span>
           </a>
           <LanguageSwitcher />
@@ -20,8 +18,8 @@
     </div>
     <div class="container main-header">
       <div class="logo-wrapper">
-        <nuxt-link to="/" class="logo"
-          ><img src="/Logo.svg" alt="logo"
+        <nuxt-link to="/" class="logo">
+          <img src="/Logo.svg" alt="logo"
         /></nuxt-link>
         <div class="search-wrapper">
           <Select

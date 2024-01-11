@@ -17,6 +17,7 @@
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',
           }"
+          class="bg-transparent"
         >
           <SwiperSlide v-for="el in options" class="slide flex flex-col grow">
             <div class="flex gap-1">
@@ -86,7 +87,7 @@ import {
 const modules = reactive([EffectCoverflow, Pagination, Navigation, Autoplay]);
 </script>
 
-<style scoped>
+<style>
 section {
   padding: 50px 0;
   background-color: #f1f2f4;
@@ -105,20 +106,21 @@ section {
   /* Testimonial Card */
   box-shadow: 0px 12px 80px 0px rgba(0, 44, 109, 0.05);
 }
-.clients{
-  margin-top:20px;
+.clients {
+  margin-top: 20px;
 }
 .clients .swiper-pagination-bullet {
-  background-color: black !important;
-  width: 4px;
-  height: 4px;
+  background-color: blue !important;
+  width: 10px;
+  height: 10px;
   transition: all 0.3s;
 }
 
 .clients .swiper-pagination-bullet-active {
-  background: black !important;
-  height: 4px;
-  width: 4px;
+  background: blue !important;
+  height: 10px;
+  width: 24px;
+  border-radius: 32px !important;
   opacity: 1 !important;
   transition: all 0.3s;
 }
