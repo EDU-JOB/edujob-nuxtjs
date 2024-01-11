@@ -12,13 +12,13 @@
 
     <inputCard />
 
-    <ul class="container mx-auto jobs__list">
+    <ul class="container jobs__list">
       <nuxt-link
         v-for="item in obj"
         :key="item.title"
         :to="{ params: { slug: item.title } }"
       >
-        <VacancyCard :item="item" />
+        <CardsVacancy :item="item" />
       </nuxt-link>
     </ul>
   </section>

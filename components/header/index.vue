@@ -10,6 +10,7 @@
         <div class="">
           <a href="tel:+998755550178">
             <!-- <img src="/icons/PhoneCall.svg" alt="" /> -->
+            <i class="icon-database-duotone-1 text-xl text-black"></i>
             <span>+99875-555-01-78</span>
           </a>
           <LanguageSwitcher />

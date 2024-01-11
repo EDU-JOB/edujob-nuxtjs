@@ -9,8 +9,19 @@ export default defineNuxtConfig({
     "radix-vue/nuxt",
     "@element-plus/nuxt",
     "@nuxt/image",
-    'nuxt-swiper'
+    "nuxt-swiper",
   ],
+  i18n: {
+    locales: ["en", "ru", "uz"], // used in URL path prefix
+    defaultLocale: "en", // default locale of your project for Nuxt pages and routings
+    // vueI18n: {
+    //       fallbackLocale: "uz",
+    //       messages: {
+    //         ru,
+    //         uz,
+    //         en
+    //       },
+  },
   // i18n: {
   //   locales: ["ru", "uz", "en"],
   //   defaultLocale: "uz",

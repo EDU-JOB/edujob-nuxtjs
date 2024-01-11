@@ -6,13 +6,15 @@
         <el-button type="primary" plain>Batafsil</el-button>
       </div>
       <div class="cards">
-        <CardsVacancy v-for="el in 12" :key="el" />
+        <CardsVacancy v-for="el in obj" :key="el.title" :item="el"/>
       </div>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { obj } from '~/constants';
+</script>
 
 <style scoped lang="scss">
 section {

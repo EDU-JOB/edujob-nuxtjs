@@ -289,7 +289,7 @@
             to="/jobs/[slug].vue"
             slug="{name:{{item}}, params: {{ item }}}"
           >
-            <VacancyCard :item="item" />
+            <CardsVacancy :item="item" />
           </nuxt-link>
         </ul>
       </div>

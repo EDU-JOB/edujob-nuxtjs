@@ -2,11 +2,11 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(90deg, #fff6e6 0%, #fff 100%), var(--white, #fff);
-  box-shadow: 0px 2px 18px 0px rgba(24, 25, 28, 0.03);
   border-radius: 8px;
+  box-shadow: 0px 2px 18px 0px rgba(24, 25, 28, 0.03);
   border: 1px #e4e5e8 solid;
   gap: 20px;
+  transition: 0.3s all;
 }
 .vacancy__title {
   color: #18191c;
@@ -32,9 +32,14 @@
   display: flex;
   align-items: center;
 }
-.vacancy__inner-box {
-  margin-left: 12px;
+.vacancy__box {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vacancy__inner-box {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 12px;
 }
@@ -50,12 +55,9 @@
   font-size: 14px;
   font-weight: 400;
 }
-.vacancy__bookmark {
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-  width: 24px;
-  height: 24px;
-  margin-left: 100px;
+
+.vacancy:hover {
+  box-shadow: 0px 2px 18px 0px rgba(24, 25, 28, 0.1);
+  border: 1px #b4b4b4 solid;
+  transition: 0.3s all;
 }/*# sourceMappingURL=card.css.map */

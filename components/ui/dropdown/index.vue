@@ -7,7 +7,7 @@
     </div>
     <ul
       v-if="state && options?.length"
-      class="bg-white/20 border border-white/30 backdrop-blur-lg rounded-xl p-2 absolute w-auto mt-4"
+      class="bg-black/40 border border-white/30 backdrop-blur-lg rounded-xl p-2 absolute -translate-x-10 0 w-[100px] mt-4"
       :class="[optionsWrapperClass]"
     >
       <li
@@ -18,17 +18,6 @@
         class="rounded-lg transition-all gap-2 group cursor-pointer"
       >
         <slot :data="el" name="option">
-          <div
-            class="rounded-lg transition-all flex items-center gap-2 p-2 hover:bg-white/10"
-          >
-            <img :src="el.img" alt="" class="" />
-            <div class="text-white">
-              <h3 class="text-base group-hover:text-red-500 transition-all">
-                {{ el[labelKey] }}
-              </h3>
-              <p class="text-sm opacity-60">{{ el[valueKey] }} destinations</p>
-            </div>
-          </div>
         </slot>
       </li>
     </ul>
@@ -59,7 +48,7 @@ const target = ref(null);
 const onOpen = () => {
   state.value = !state.value;
 };
-const onSelect = (element:any) => {
+const onSelect = (element: any) => {
   emit("on-click", element);
   state.value = false;
 };

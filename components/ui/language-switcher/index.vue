@@ -1,20 +1,20 @@
 <template>
-  <div :class="switcherClass" class="reltive">
+  <div :class="switcherClass" class="">
     <Dropdown
       :options="languageSwitcherData"
       value-key="descr"
       label-key="title"
       class-name="right-0"
-      optionsWrapperClass="grid grid-cols-1 gap-1  right-0 left-auto bg-black/40"
+      optionsWrapperClass="grid  gap-1 "
     >
       <template #header>
         <div class="flex items-center">
           <img
             :src="currentLocale?.img"
             alt="uk-icon"
-            class="cursor-pointer w-[40px]"
+            class="cursor-pointer w-[30px]"
           />
-          <span class="text-sm font-medium md:hidden ml-2">
+          <span class="text-sm font-medium ml-2">
             {{ currentLocale?.title }}
           </span>
         </div>
@@ -29,18 +29,16 @@
             <img
               :src="slotData.data.img"
               :alt="slotData.data.title"
-              class="w-[50px]"
+              class="w-[30px]"
             />
-            <h2>
+            <h2 class="text-sm">
               {{ slotData.data.title }}
             </h2>
           </div>
           <div
             class="opacity-0"
             :class="{ 'opacity-100': $i18n.locale == slotData.data.locale }"
-          >
-            <i class="fas fa-check"></i>
-          </div>
+          ></div>
         </div>
       </template>
     </Dropdown>
