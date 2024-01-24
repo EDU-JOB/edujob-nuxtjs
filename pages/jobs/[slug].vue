@@ -14,7 +14,7 @@
 
     <div class="single__head container mx-auto">
       <div class="single__box">
-        <img src="@/assets/images/fecebook.png" alt="" class="single__logo" />
+        <img src="/icons/fecebook.png" alt="" class="single__logo" />
 
         <div class="single__wrapper">
           <h2 class="single__title">Senior UX Designer</h2>
@@ -28,7 +28,7 @@
         <button class="single__bookmark">
           <img
             class="single__bookmark-icon"
-            src="@/assets/images/BookmarkSimple.svg"
+            src="/icons/BookmarkSimple.svg"
             alt=""
           />
         </button>
@@ -36,7 +36,7 @@
           Apply now
           <img
             class="single__apply-icon"
-            src="@/assets/images/strelka.svg"
+            src="/icons/strelka.svg"
             alt=""
           />
         </button>
@@ -163,7 +163,7 @@
           </div>
           <div class="single__box1">
             <img
-              src="@/assets/images/location.svg"
+              src="/icons/location.svg"
               alt=""
               class="single__location-icon"
             />
@@ -180,7 +180,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="@/assets/images/post.svg"
+                  src="/icons/post.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Job Posted:</h3>
@@ -189,7 +189,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="@/assets/images/timer.svg"
+                  src="/icons/timer.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Job expire in:</h3>
@@ -198,7 +198,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="@/assets/images/stack.svg"
+                  src="/icons/stack.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Job Level:</h3>
@@ -207,7 +207,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="@/assets/images/stack.svg"
+                  src="/icons/stack.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Job Level:</h3>
@@ -216,7 +216,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="@/assets/images/wallet.svg"
+                  src="/icons/wallet.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Experience</h3>
@@ -225,7 +225,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="@/assets/images/certificate.svg"
+                  src="/icons/certificate.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">sertificat</h3>
@@ -238,7 +238,7 @@
             <div class="single__links-box">
               <button class="single__links-btn">
                 <img
-                  src="@/assets/images/LinkSimple.svg"
+                  src="/icons/LinkSimple.svg"
                   alt=""
                   class="single__links-icon"
                 />
@@ -246,28 +246,28 @@
               </button>
               <a href="" class="single__link">
                 <img
-                  src="@/assets/images/linkedin.svg"
+                  src="/icons/linkedin.svg"
                   alt=""
                   class="single__social-icon"
                 />
               </a>
               <a href="" class="single__link">
                 <img
-                  src="@/assets/images/facebookk.svg"
+                  src="/icons/facebookk.svg"
                   alt=""
                   class="single__social-icon"
                 />
               </a>
               <a href="" class="single__link">
                 <img
-                  src="@/assets/images/twitter.svg"
+                  src="/icons/twitter.svg"
                   alt=""
                   class="single__social-icon"
                 />
               </a>
               <a href="" class="single__link">
                 <img
-                  src="@/assets/images/email.svg"
+                  src="/icons/email.svg"
                   alt=""
                   class="single__social-icon"
                 />
