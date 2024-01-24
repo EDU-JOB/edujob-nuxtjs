@@ -40,7 +40,7 @@
           Animation.
         </p>
       </div>
-      <NuxtImg src="/Illustration.svg" alt="" class="intro-img" />
+      <img src="/Illustration.svg" alt="" class="intro-img" />
     </div>
     <div class="container cards">
       <CardsDirections v-for="el in directionsCard" :options="el" />

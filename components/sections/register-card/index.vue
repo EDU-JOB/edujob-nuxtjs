@@ -3,7 +3,7 @@
     <div class="container cards">
       <div
         v-for="el in registerCard"
-        class="card bg-center bg-cover bg-no-repeat"
+        class="card bg-center bg-cover bg-no-repeat "
         :class="`bg-[url('${el.bg}')]`"
         :style="{ backgroundImage: el.bg }"
       >
@@ -33,6 +33,9 @@ section {
   .card {
     padding: 50px;
     border-radius: 12px;
+    background: url("/register-bg-man.png");
+    background-position:center;
+    background-size: cover;
     h2 {
       font-size: 32px;
       font-weight: 600;
