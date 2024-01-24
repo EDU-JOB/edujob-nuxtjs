@@ -9,8 +9,8 @@
 @font-face {
   font-family: 'inter';
   src:
-    url('@/assets/font/Inter-Extrabold.ttf') format('opentype'),
-    url('@/assets/font/Inter-Extrabold.ttf') format('opentype');
+    url('@/assets/font/Inter-ExtraBold.ttf') format('opentype'),
+    url('@/assets/font/Inter-ExtraBold.ttf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
