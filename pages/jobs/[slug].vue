@@ -198,7 +198,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="/icons/stack.svg"
+                  src="/icons/Stack.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Job Level:</h3>
@@ -207,7 +207,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="/icons/stack.svg"
+                  src="/icons/Stack.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Job Level:</h3>
