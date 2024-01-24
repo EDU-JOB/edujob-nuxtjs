@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   ],
   i18n: {
     locales: ["en", "ru", "uz"], // used in URL path prefix
-    defaultLocale: "en", // default locale of your project for Nuxt pages and routings
+    defaultLocale: "uz", // default locale of your project for Nuxt pages and routings
     // vueI18n: {
     //       fallbackLocale: "uz",
     //       messages: {
