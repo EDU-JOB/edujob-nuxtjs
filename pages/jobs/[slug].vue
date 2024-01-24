@@ -189,7 +189,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="/icons/timer.svg"
+                  src="/icons/search.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Job expire in:</h3>
@@ -216,7 +216,7 @@
               <li class="single__items">
                 <img
                   class="single__icon"
-                  src="/icons/wallet.svg"
+                  src="/icons/search.svg"
                   alt=""
                 />
                 <h3 class="single__overview-title">Experience</h3>
