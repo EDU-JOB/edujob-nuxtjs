@@ -6,13 +6,23 @@
       </div>
       <div class="relative clients">
         <Swiper
-          :slidesPerView="3"
-          :centeredSlides="true"
+          :slidesPerView="1"
+          :centeredSlides="false"
           :grabCursor="true"
           :spaceBetween="20"
           :loop="true"
           :modules="modules"
           :pagination="{ clickable: true }"
+          :breakpoints="{
+            '768': {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            '1024': {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }"
           :navigation="{
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',
