@@ -6,14 +6,14 @@
       </div>
       <div class="relative clients">
         <Swiper
-          :slidesPerView="1"
-          :centeredSlides="false"
-          :grabCursor="true"
-          :spaceBetween="20"
-          :loop="true"
-          :modules="modules"
-          :pagination="{ clickable: true }"
-          :breakpoints="{
+            :slidesPerView="1"
+            :centeredSlides="false"
+            :grabCursor="true"
+            :spaceBetween="20"
+            :loop="true"
+            :modules="modules"
+            :pagination="{ clickable: true }"
+            :breakpoints="{
             '768': {
               slidesPerView: 2,
               spaceBetween: 10,
@@ -23,27 +23,27 @@
               spaceBetween: 20,
             },
           }"
-          :navigation="{
+            :navigation="{
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',
           }"
-          class="bg-transparent"
+            class="bg-transparent"
         >
           <SwiperSlide v-for="el in options" class="slide flex flex-col grow">
             <div class="flex gap-1">
-              <img src="/icons/star 5.svg" alt="star" />
-              <img src="/icons/star 5.svg" alt="star" />
-              <img src="/icons/star 5.svg" alt="star" />
-              <img src="/icons/star 5.svg" alt="star" />
-              <img src="/icons/star 5.svg" alt="star" />
+              <img src="/icons/star 5.svg" alt="star"/>
+              <img src="/icons/star 5.svg" alt="star"/>
+              <img src="/icons/star 5.svg" alt="star"/>
+              <img src="/icons/star 5.svg" alt="star"/>
+              <img src="/icons/star 5.svg" alt="star"/>
             </div>
             <p
-              class="flex-grow py-2 min-h-[150px] max-h-[200px] overflow-y-auto"
+                class="flex-grow py-2 min-h-[150px] max-h-[200px] overflow-y-auto"
             >
               {{ el.descr }}
             </p>
             <div class="flex gap-3 my-auto">
-              <img :src="el.img" alt="" />
+              <img :src="el.img" alt=""/>
               <div class="flex flex-col">
                 <h3 class="font-medium">{{ el.name }}</h3>
                 <p class="text-sm opacity-50">{{ el.job }}</p>
@@ -53,19 +53,19 @@
         </Swiper>
         <div>
           <div
-            class="swiper-button-next-custom absolute top-1/2 -right-12 translate-y-[-50%] z-40 bg-white rounded cursor-pointer p-2 inline-block transition-all"
+              class="swiper-button-next-custom absolute top-1/2 -right-12 translate-y-[-50%] z-40 bg-white rounded cursor-pointer p-2 inline-block transition-all"
           >
             <img
-              src="/icons/fi_arrow-right (1).svg"
-              alt=""
-              class="rotate-180"
+                src="/icons/fi_arrow-right (1).svg"
+                alt=""
+                class="rotate-180"
             />
           </div>
 
           <div
-            class="swiper-button-prev-custom absolute top-1/2 -left-12 translate-y-[-50%] z-40 bg-white rounded cursor-pointer p-2 inline-block transition-all"
+              class="swiper-button-prev-custom absolute top-1/2 -left-12 translate-y-[-50%] z-40 bg-white rounded cursor-pointer p-2 inline-block transition-all"
           >
-            <img src="/icons/fi_arrow-right (1).svg" alt="" class="" />
+            <img src="/icons/fi_arrow-right (1).svg" alt="" class=""/>
           </div>
         </div>
       </div>
@@ -74,7 +74,12 @@
 </template>
 
 <script setup lang="ts">
-import { mainSwiperData } from "~/constants";
+import {Swiper, SwiperSlide} from "swiper/vue";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import {Autoplay, EffectCoverflow, Navigation, Pagination,} from "swiper/modules";
+
 interface Props {
   options: {
     name: string;
@@ -83,17 +88,9 @@ interface Props {
     img: string;
   }[];
 }
+
 defineProps<Props>();
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import {
-  EffectCoverflow,
-  Pagination,
-  Navigation,
-  Autoplay,
-} from "swiper/modules";
+
 const modules = reactive([EffectCoverflow, Pagination, Navigation, Autoplay]);
 </script>
 
@@ -108,17 +105,20 @@ section {
     font-weight: 600;
   }
 }
+
 .slide {
   padding: 24px;
   border-radius: 12px;
-  background: var(--white, #fff);
+  background: white;
 
   /* Testimonial Card */
   box-shadow: 0px 12px 80px 0px rgba(0, 44, 109, 0.05);
 }
+
 .clients {
   margin-top: 20px;
 }
+
 .clients .swiper-pagination-bullet {
   background-color: blue !important;
   width: 10px;

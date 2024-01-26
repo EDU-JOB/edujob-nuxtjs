@@ -25,7 +25,6 @@ defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
-@import url(../../../assets//scss/index.scss);
 
 .card {
   display: flex;

@@ -23,7 +23,6 @@ defineProps<Props>();
 
 <style scoped>
 .work {
-  //background: var(--Gray-50, #f1f2f4);
   padding: 50px 0;
 
   &__title {
