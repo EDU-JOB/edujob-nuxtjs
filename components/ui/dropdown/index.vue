@@ -6,16 +6,16 @@
       </slot>
     </div>
     <ul
-      v-if="state && options?.length"
-      class="bg-black/40 border border-white/30 backdrop-blur-lg rounded-xl p-2 absolute -translate-x-10 0 w-[100px] mt-4"
-      :class="[optionsWrapperClass]"
+        v-if="state && options?.length"
+        class="bg-gray-300 border border-gray backdrop-blur-lg rounded-lg p-2 absolute -translate-x-10  w-[100px] mt-4"
+        :class="[optionsWrapperClass]"
     >
       <li
-        v-for="(el, idx) in options"
-        :key="idx"
-        @click="onSelect(el)"
-        :class="{ optionClass, 'bg-white/10': el.active }"
-        class="rounded-lg transition-all gap-2 group cursor-pointer"
+          v-for="(el, idx) in options"
+          :key="idx"
+          @click="onSelect(el)"
+          :class="{ optionClass, 'bg-white/10': el.active }"
+          class="rounded-lg transition-all gap-2 group cursor-pointer"
       >
         <slot :data="el" name="option">
         </slot>
@@ -25,8 +25,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { onClickOutside } from "@vueuse/core";
+import {ref} from "vue";
+import {onClickOutside} from "@vueuse/core";
 
 interface Props {
   options: any[];
@@ -37,6 +37,7 @@ interface Props {
   optionClass?: string;
   optionsWrapperClass?: string;
 }
+
 defineProps<Props>();
 
 const emit = defineEmits<{

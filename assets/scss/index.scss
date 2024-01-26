@@ -1,5 +1,29 @@
 @import "../icomoon/style.css";
 @import "../font/font.css";
+
+
+.transition-200 {
+  @apply transition-all duration-200;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-y-center {
+  @apply flex items-center;
+}
+
+.flex-center-between {
+  @apply flex items-center justify-between;
+}
+.fade-enter-active {
+  animation: fade 0.3s;
+}
+
+.fade-leave-active {
+  animation: fade 0.3s reverse;
+}
 html,
 body,
 #app {
@@ -13,11 +37,8 @@ html.dark {
   background: #222;
   color: white;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-a {
-  font-weight: 400;
-  color: var(--el-color-primary);
-}
+////
+//a {
+//  font-weight: 400;
+//  color: var(--el-color-primary);
+//}

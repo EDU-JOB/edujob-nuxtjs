@@ -1,9 +1,9 @@
 <template>
-  <div class="work-card">
-    <div class="work-card__icon">
-      <img :src="option.icon" alt="" />
+  <div class="work-card group">
+    <div class="work-card__icon group-hover:bg-blue">
+      <i :class="option.icon" class="text-xl text-blue group-hover:text-white transition-200"></i>
     </div>
-    <h2 class="work-card__title">{{ option.title }}</h2>
+    <h2 class="work-card__title ">{{ option.title }}</h2>
     <p class="work-card__descr">
       {{ option.descr }}
     </p>
@@ -18,6 +18,7 @@ interface Props {
     descr: string;
   };
 }
+
 defineProps<Props>();
 </script>
 
@@ -29,6 +30,7 @@ defineProps<Props>();
   flex-direction: column;
   align-items: center;
   transition: 0.3s all;
+
   &__icon {
     width: 72px;
     height: 72px;
@@ -38,17 +40,20 @@ defineProps<Props>();
     align-items: center;
     justify-content: center;
   }
+
   &__title {
     font-size: 18px;
     margin-top: 12px;
     text-align: center;
     font-weight: 600;
   }
+
   &__descr {
     font-size: 14px;
     text-align: center;
   }
 }
+
 .work-card:hover {
   background: #fff;
   transition: 0.3s ease-in-out;

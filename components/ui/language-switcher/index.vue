@@ -1,18 +1,18 @@
 <template>
   <div :class="switcherClass" class="">
     <Dropdown
-      :options="languageSwitcherData"
-      value-key="descr"
-      label-key="title"
-      class-name="right-0"
-      optionsWrapperClass="grid  gap-1 "
+        :options="languageSwitcherData"
+        value-key="descr"
+        label-key="title"
+        class-name="right-0"
+        :optionsWrapperClass="switcherClass"
     >
       <template #header>
         <div class="flex items-center">
           <img
-            :src="currentLocale?.img"
-            alt="uk-icon"
-            class="cursor-pointer w-[30px]"
+              :src="currentLocale?.img"
+              alt="uk-icon"
+              class="cursor-pointer w-[30px]"
           />
           <span class="text-sm font-medium ml-2">
             {{ currentLocale?.title }}
@@ -21,23 +21,23 @@
       </template>
       <template v-slot:option="slotData">
         <div
-          @click="$i18n.locale = slotData.data.locale"
-          class="text-white flex items-center justify-between gap-x-2 p-2 rounded-lg hover:bg-white/10 group transition-all"
-          :class="{ 'bg-white/10 ': $i18n.locale == slotData.data.locale }"
+            @click="$i18n.locale = slotData.data.locale"
+            class="text-white flex items-center justify-between gap-x-2 p-2 rounded-lg hover:bg-white/10 group transition-all"
+            :class="{ 'bg-white/10 ': $i18n.locale == slotData.data.locale }"
         >
           <div class="flex items-center gap-1">
             <img
-              :src="slotData.data.img"
-              :alt="slotData.data.title"
-              class="w-[30px]"
+                :src="slotData.data.img"
+                :alt="slotData.data.title"
+                class="w-[30px]"
             />
             <h2 class="text-sm">
               {{ slotData.data.title }}
             </h2>
           </div>
           <div
-            class="opacity-0"
-            :class="{ 'opacity-100': $i18n.locale == slotData.data.locale }"
+              class="opacity-0"
+              :class="{ 'opacity-100': $i18n.locale == slotData.data.locale }"
           ></div>
         </div>
       </template>
@@ -46,21 +46,23 @@
 </template>
 
 <script setup lang="ts">
-import { languageSwitcherData } from "@/constants/index";
+import {languageSwitcherData} from "@/constants/index";
 
-import { useI18n } from "vue-i18n";
-import { computed } from "vue";
+import {useI18n} from "vue-i18n";
+import {computed} from "vue";
 
-const { locale } = useI18n();
+const {locale} = useI18n();
+
 interface Props {
   switcherClass?: string;
 }
+
 defineProps<Props>();
 
 // const currentLocale = languageSwitcherData[0]
 
 const currentLocale = computed(() =>
-  languageSwitcherData.find((element) => element?.locale === locale.value)
+    languageSwitcherData.find((element) => element?.locale === locale.value)
 );
 </script>
 

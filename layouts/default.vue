@@ -1,10 +1,11 @@
 <template>
   <div class="wrapper">
-    <Header />
+    <Header class="hidden md:block"/>
+    <HeaderResponsiveHeader class="md:hidden"/>
     <div class="slot">
-      <slot />
+      <slot/>
     </div>
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
@@ -15,6 +16,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
   .slot {
     flex-grow: 1;
   }
