@@ -1,13 +1,13 @@
 <template>
-  <div class="flex-center-between">
-    <h2 class=" text-xl md:text-2xl lg:text-4xl" :class="titleClass">
+  <div class="flex-center-between" :class="wrapperClass">
+    <h2 class="text-light text-lg" :class="titleClass">
       {{ title }}
     </h2>
     <slot>
       <nuxtLink
-          v-if="linkText"
-          :to="link"
-          class="text-gray flex-y-center gap-1 hover:text-blue transition-all cursor-pointer"
+        v-if="linkText"
+        :to="link"
+        class="text-gray flex-y-center gap-1 hover:text-blue transition-all cursor-pointer"
       >
         <span class="font-normal">{{ linkText }}</span
         ><i class="icon-chevron-right"></i>
@@ -22,7 +22,7 @@ interface Props {
   linkText?: string;
   title: string;
   titleClass?: string;
+  wrapperClass?: string;
 }
-
 defineProps<Props>();
 </script>

@@ -1,59 +1,60 @@
 <template>
-  <div>
-    <div @click="onOpen" class="cursor-pointer" tabindex="0">
-      <slot name="header">
-        {{ title }}
-      </slot>
-    </div>
-    <ul
-        v-if="state && options?.length"
-        class="bg-gray-300 border border-gray backdrop-blur-lg rounded-lg p-2 absolute -translate-x-10  w-[100px] mt-4"
-        :class="[optionsWrapperClass]"
+  <div class="relative min-w-fit" @focusout="onClickAway">
+    <button
+      class="custom-hover text-sm text-white flex-y-center group rounded-lg transition-all duration-150 hover:text-gray-200 !text-dark w-full"
+      :class="buttonClass"
+      @click="onClick"
     >
-      <li
-          v-for="(el, idx) in options"
-          :key="idx"
-          @click="onSelect(el)"
-          :class="{ optionClass, 'bg-white/10': el.active }"
-          class="rounded-lg transition-all gap-2 group cursor-pointer"
+      <slot name="head" />
+    </button>
+    <transition name="dropdown">
+      <ul
+        v-if="dropDownActive"
+        class="rounded-lg lg:rounded-xl shadow-[0_4px_36px_rgba(56,56,56,0.16)] border border-dark-200 w-full h-auto absolute !z-[70] flex flex-col cursor-pointer bg-dark-500"
+        :class="[listStyle, above ? 'bottom-[60px]' : ' lg:top-7']"
+        @click="onClickAway"
       >
-        <slot :data="el" name="option">
-        </slot>
-      </li>
-    </ul>
+        <slot />
+      </ul>
+    </transition>
   </div>
 </template>
-
-<script setup lang="ts">
-import {ref} from "vue";
-import {onClickOutside} from "@vueuse/core";
+<script lang="ts" setup>
+import { ref } from "vue";
 
 interface Props {
-  options: any[];
   title?: string;
-  labelKey: string;
-  valueKey: string;
-  headerClass?: string;
-  optionClass?: string;
-  optionsWrapperClass?: string;
+  listStyle?: string;
+  buttonClass?: string | [string];
+  above?: boolean;
 }
+withDefaults(defineProps<Props>(), {});
 
-defineProps<Props>();
+const emit = defineEmits(["on-click"]);
+const dropDownActive = ref(false);
 
-const emit = defineEmits<{
-  (e: "on-click", value: any): void;
-}>();
-const state = ref(false);
-const target = ref(null);
-
-const onOpen = () => {
-  state.value = !state.value;
+const onClick = () => {
+  dropDownActive.value = !dropDownActive.value;
+  emit("on-click", dropDownActive.value);
 };
-const onSelect = (element: any) => {
-  emit("on-click", element);
-  state.value = false;
-};
-onClickOutside(target, (event) => (state.value = false));
+
+function onClickAway() {
+  dropDownActive.value = false;
+}
 </script>
 
-<style scoped></style>
+<style>
+.dropdown-enter-active {
+  transition: all 0.2s ease;
+}
+
+.dropdown-leave-active {
+  transition: all 0.2s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+</style>
