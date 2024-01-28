@@ -27,3 +27,4 @@ logs
 .nuxt/components.d.ts
 yarn.lock
 package-lock.json
+.lock
