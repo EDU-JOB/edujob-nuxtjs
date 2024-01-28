@@ -1,12 +1,7 @@
 <template>
   <section class="direction">
     <div class="container">
-      <div class="direction-title">
-        <h2>Oma Bop Yo’nalishlar</h2>
-        <el-button type="primary" plain
-        >Batafsil <img src="/icons/fi_arrow-right.svg" alt=""
-        /></el-button>
-      </div>
+      <UiTitle :title="$t('popular_category')" :linkText="$t('view_all')"/>
       <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         <CardsDirections
             v-for="el in directionList"

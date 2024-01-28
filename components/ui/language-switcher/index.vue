@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center relative">
-    <div @click="state = !state" class="cursor-pointer flex-y-center gap-3 ">
-      <img :src="currentLanguage?.flag" class="h-4" :alt="currentLanguage?.name + 'flag'">
+    <div ref="list" @click="state = !state" :class="wrapperClass" class="cursor-pointer flex-y-center gap-3 ">
+      <img :src="currentLanguage?.flag" class="h-4 aspect-video" :alt="currentLanguage?.name + 'flag'">
       <p
 
           class="flex-y-center"
@@ -11,17 +11,20 @@
            :class="{'rotate-180 transition-200':state}"></i>
       </p>
     </div>
+
     <ul
+
         v-if="state"
+        :class="listClass"
         class="border border-dark-350  absolute translate-y-20 rounded-lg  overflow-hidden right-0"
     >
       <li
           v-for="element in languagesList"
           @click="[changeLocale(element.code), state = false]"
-          :class="{'bg-gray-300':element.name == currentLanguage.name}"
+          :class="{'bg-gray-300':element.name == currentLanguage?.name}"
           class=" flex-y-center gap-2 border-b border-b-gray-400 last:border-b-0 text-sm cursor-pointer bg-gray-200 hover:bg-gray-300 p-2 "
       >
-        <img :src="element?.flag" :alt="element?.name + 'flag'" height="16px" class="h-4">
+        <img :src="element?.flag" :alt="element?.name + 'flag'" class="h-4 aspect-video object-cover">
         <p>{{ element?.name }}</p>
       </li>
     </ul>
@@ -29,22 +32,21 @@
 
 </template>
 <script setup lang="ts">
-import {useI18n} from "vue-i18n";
+import {onClickOutside} from '@vueuse/core'
 import {useLanguageSwitcher,} from "~/composables/useLanguageSwitcher";
 
 const {changeLocale, currentLanguage, languagesList} = useLanguageSwitcher();
 
-
-const {t, locale} = useI18n();
-
 const state = ref(false);
-// const currentLocale = computed(
-//     () => language.value.find((element) => element?.code === locale.value)?.label
-// );
-// const open = ref(false);
-// const openTags = () => {
-//   open.value = !open.value;
-// };
+const list = ref(null)
+onClickOutside(list, () => state.value = false)
+
+interface Props {
+  wrapperClass: string
+  listClass: string
+}
+
+defineProps<Props>()
 </script>
 <!--<script lang="ts" setup>-->
 <!--import {ref} from "vue";-->

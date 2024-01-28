@@ -8,7 +8,7 @@
             <i class="icon-call text-xl text-black group-hover:text-blue transition-200"></i>
             <span>+99875-555-01-78</span>
           </a>
-          <LanguageSwitcher switcher-class="!-translate-x-0 gap-1"/>
+          <LanguageSwitcher list-class="!left-0"/>
         </div>
         <div @click="state = !state" class="cursor-pointer">
           <i class="icon-menu text-gray-900 text-2xl"></i>
@@ -21,11 +21,9 @@
       </nuxt-link>
       <div class="flex-y-center gap-4">
         <i class="icon-search text-xl text-gray-900"></i>
-        <div class="hidden sm:block">
-          <el-button type="primary" plain>Sign in</el-button>
-        </div>
-        <div>
-          <el-button type="primary">Post a Jobs</el-button>
+        <div class="btn-group flex-y-center gap-3">
+          <Button :text="$t('sign')" size="sm" variant="outline" class="max-sm:hidden"/>
+          <Button :text="$t('post_job')" size="sm"/>
         </div>
       </div>
     </div>

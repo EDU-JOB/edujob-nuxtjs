@@ -1,8 +1,9 @@
 <template>
   <section class="work">
     <div class="container">
-      <h2 class="work__title">How EdeJob work</h2>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+
+      <ui-title :title="$t('work_section_title')" wrapper-class=" !justify-center"/>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md: mt-6">
         <CardsWork v-for="el in options" :option="el"/>
       </div>
     </div>
@@ -10,6 +11,7 @@
 </template>
 
 <script setup lang="ts">
+
 interface Props {
   options: {
     icon: string;

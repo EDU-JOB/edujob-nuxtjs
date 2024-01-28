@@ -16,7 +16,7 @@
             <i class="icon-call text-xl text-black group-hover:text-primary transition-200"></i>
             <span>+99875-555-01-78</span>
           </a>
-          <LanguageSwitcher/>
+          <LanguageSwitcher list-class="!left-0"/>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
                 v-model="search"
                 class="w-full"
                 FormInput-class="!p-0 m-0"
-                placeholder="Job tittle, keyword, company"
+                :placeholder="$t('search_placeholder')"
                 prefix-icon="/icons/PhoneCall.svg"
             >
               <template #prefix>
@@ -53,8 +53,8 @@
         </div>
       </div>
       <div class="btn-group flex-y-center gap-3">
-        <Button text="Sign in" variant="outline"/>
-        <Button text="Post a Jobs"/>
+        <Button :text="$t('sign')" size="sm" variant="outline"/>
+        <Button :text="$t('post_job')" size="sm"/>
       </div>
     </div>
   </header>

@@ -1,9 +1,7 @@
 <template>
   <section class="">
     <div class="container px-12">
-      <div class="title">
-        <h2>Clients Testimonial</h2>
-      </div>
+      <UiTitle :title="$t('clients_testimonial')" wrapper-class="!justify-center"/>
       <div class="relative clients">
         <Swiper
             :slidesPerView="1"

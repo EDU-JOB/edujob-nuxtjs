@@ -7,12 +7,12 @@
           :class="`bg-[url('${el.bg}')]`"
           :style="{ backgroundImage: el.bg }"
       >
-        <h2>{{ el.title }}</h2>
-        <p class="md:text-3/4">
+        <h2 class="text-xl sm:text-2xl md:text-3xl">{{ el.title }}</h2>
+        <p class="md:text-3/4 text-sm md:text-base text-gray my-2">
           {{ el.descr }}
         </p>
         <nuxt-link :to="el.link">
-          <el-button>Register now</el-button>
+          <Button :text="$t('register_now')" variant="light" :adaptive="true"/>
         </nuxt-link>
       </div>
     </div>
@@ -39,16 +39,6 @@ section {
     background-position: center;
     background-size: cover;
 
-    h2 {
-      font-size: 32px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 14px;
-      color: #636a80;
-      padding: 16px 0;
-    }
   }
 }
 </style>

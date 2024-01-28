@@ -7,6 +7,7 @@ export default defineNuxtConfig({
         "@element-plus/nuxt",
         "@nuxt/image",
         "nuxt-swiper",
+        '@vueuse/nuxt',
     ],
     app: {
         head: {

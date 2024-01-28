@@ -30,7 +30,7 @@
                 <i class="icon-location text-primary mr-2 text-xl"></i>
               </template>
             </FormInput>
-            <el-button type="primary" size="large">Qidirsh</el-button>
+            <Button text="Qidirsh"/>
           </div>
         </div>
         <p class="text-sm md:text-base mt-4">

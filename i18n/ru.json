@@ -1,16 +1,35 @@
 {
   "main": "Главный",
   "news": "Новости",
-
   "library": "Библиотека",
   "contact": "Связатся",
   "enter": "Войти",
-
   "all": "Все",
   "search": "поиск",
   "top_books": "лучшие книги",
   "more": "более",
   "courses": "Курс",
-  "share": "Поделиться"
-
+  "share": "Поделиться",
+  "view_all": "Посмотреть все",
+  "sign": "Войти",
+  "post_job": "Опубликовать вакансию",
+  "search_placeholder": "Должность, ключевое слово, компания",
+  "search_job_placeholder": "Должность, ключевое слово...",
+  "search_location": "Ваше местоположение",
+  "live_job": "Живая работа",
+  "companies": "Компании",
+  "candidates": "Кандидаты",
+  "new_jobs": "Новые вакансии",
+  "popular_vacancies": "Самые популярные вакансии",
+  "intro_title": "Найдите работу, которая соответствует вашим интересам и навыкам.",
+  "intro_descr": "Aliquam vitae turpis in diam convallis finibus in at risus. Nullam in scelerisque leo, eget sollicitudin velit bestibulum.",
+  "work_section_title": "Как работает jobpilot",
+  "popular_category": "Популярная категория",
+  "featured_job": "избранная работа",
+  "top_companies": "Top companies",
+  "clients_testimonial": "Отзывы клиентов",
+  "become_candidate": "Стать кандидатом",
+  "become_employers": "Стать работодателем",
+  "apply_now": "Применить сейчас",
+  "register_now": "Зарегистрироваться"
 }

@@ -1,10 +1,7 @@
 <template>
   <section>
     <div class="container">
-      <div class="title">
-        <h2 class="job-title">Featured job</h2>
-        <el-button type="primary" plain>Batafsil</el-button>
-      </div>
+      <UiTitle :title="$t('featured_job')" :linkText="$t('view_all')"/>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
         <CardsVacancy v-for="el in obj" :key="el.title" :item="el"/>
       </div>
