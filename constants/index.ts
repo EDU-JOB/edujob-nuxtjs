@@ -25,6 +25,12 @@ export const navLink = [
     },
 ];
 
+export const jobsCard = [
+    {title: 'Export Import Management (EXIM)', minSalary: 2000, maxSalary: 7000, qty: 10000, id: 1},
+    {title: 'International Logistics Management (ILM)', minSalary: 2000, maxSalary: 7000, qty: 10000, id: 1},
+    {title: 'Supply Chain Management', minSalary: 2000, maxSalary: 7000, qty: 10000, id: 1},
+    {title: 'Business Management', minSalary: 2000, maxSalary: 7000, qty: 10000, id: 1},
+]
 export const languageSwitcherData = [
     {locale: "ru", title: "Рус", img: "/flags/rus-flag.png"},
     {locale: "en", title: "Eng", img: "/flags/eng-flag.png"},

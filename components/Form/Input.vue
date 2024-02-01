@@ -1,7 +1,7 @@
 <template>
   <div
       :class="[
-      'inline-flex items-center transition-300 px-3 relative bg-transparent rounded overflow-hidden w-full group border border-gray-100 focus-within:border-gray transition-all',
+      'inline-flex items-center transition-300 px-3 relative bg-transparent rounded overflow-hidden w-full group  transition-all',
       {'!border-red':error} ,
     ]"
   >
@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+
 
 export interface Props {
   type?: string;
@@ -71,7 +71,7 @@ const emit = defineEmits<{
   (e: "enter"): void;
 }>();
 
-const handleInput = (e: { target: HTMLInputElement }) => {
+const handleInput = (e: any): void => {
   emit("update:modelValue", e.target.value);
 };
 const handleEnter = () => {

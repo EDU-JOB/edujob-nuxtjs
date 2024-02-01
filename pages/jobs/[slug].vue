@@ -2,7 +2,7 @@
   <section class="single">
     <div class="single__tab">
       <div class="container mx-auto flex justify-between">
-        <h2 class="single__title">Job Details</h2>
+        <h2 class="single__title">Job Details {{ route }}</h2>
         <div class="single__navi">
           <span class="single__navi-link">home /</span>
           <span class="single__navi-link">Job /</span>
@@ -14,7 +14,7 @@
 
     <div class="single__head container mx-auto">
       <div class="single__box">
-        <img src="/icons/fecebook.png" alt="" class="single__logo" />
+        <img src="/icons/fecebook.png" alt="" class="single__logo"/>
 
         <div class="single__wrapper">
           <h2 class="single__title">Senior UX Designer</h2>
@@ -27,17 +27,17 @@
       <div class="single__btns">
         <button class="single__bookmark">
           <img
-            class="single__bookmark-icon"
-            src="/icons/BookmarkSimple.svg"
-            alt=""
+              class="single__bookmark-icon"
+              src="/icons/BookmarkSimple.svg"
+              alt=""
           />
         </button>
         <button class="single__apply">
           Apply now
           <img
-            class="single__apply-icon"
-            src="/icons/strelka.svg"
-            alt=""
+              class="single__apply-icon"
+              src="/icons/strelka.svg"
+              alt=""
           />
         </button>
       </div>
@@ -49,8 +49,8 @@
         <p class="single__job-desc">
           Velstar is a Shopify Plus agency, and we partner with brands to help
           them grow, we also do the same with our people!
-          <br />
-          <br />
+          <br/>
+          <br/>
           Here at Velstar, we don't just make websites, we create exceptional
           digital experiences that consumers love. Our team of designers,
           developers, strategists, and creators work together to push brands to
@@ -58,8 +58,8 @@
           Interface Design, to Digital Marketing, we have a proven track record
           in delivering outstanding eCommerce solutions and driving sales for
           our clients.
-          <br />
-          <br />
+          <br/>
+          <br/>
           The role will involve translating project specifications into clean,
           test-driven, easily maintainable code. You will work with the Project
           and Development teams as well as with the Technical Director, adhering
@@ -67,8 +67,8 @@
           non-functional requirements. You will have the opportunity to create
           new, innovative, secure and scalable features for our clients on the
           Shopify platform
-          <br />
-          <br />
+          <br/>
+          <br/>
           Want to work with us? You're in good company!
         </p>
 
@@ -163,9 +163,9 @@
           </div>
           <div class="single__box1">
             <img
-              src="/icons/location.svg"
-              alt=""
-              class="single__location-icon"
+                src="/icons/location.svg"
+                alt=""
+                class="single__location-icon"
             />
             <h3 class="single__location-title">Job Location</h3>
             <span class="single__location">Dhaka, Bangladesh</span>
@@ -179,54 +179,54 @@
             <ul class="single__overview-list">
               <li class="single__items">
                 <img
-                  class="single__icon"
-                  src="/icons/post.svg"
-                  alt=""
+                    class="single__icon"
+                    src="/icons/post.svg"
+                    alt=""
                 />
                 <h3 class="single__overview-title">Job Posted:</h3>
                 <p class="single__overview-data">14 Jun, 2021</p>
               </li>
               <li class="single__items">
                 <img
-                  class="single__icon"
-                  src="/icons/search.svg"
-                  alt=""
+                    class="single__icon"
+                    src="/icons/search.svg"
+                    alt=""
                 />
                 <h3 class="single__overview-title">Job expire in:</h3>
                 <p class="single__overview-data">14 Aug, 2021</p>
               </li>
               <li class="single__items">
                 <img
-                  class="single__icon"
-                  src="/icons/Stack.svg"
-                  alt=""
+                    class="single__icon"
+                    src="/icons/Stack.svg"
+                    alt=""
                 />
                 <h3 class="single__overview-title">Job Level:</h3>
                 <p class="single__overview-data">Entry Level</p>
               </li>
               <li class="single__items">
                 <img
-                  class="single__icon"
-                  src="/icons/Stack.svg"
-                  alt=""
+                    class="single__icon"
+                    src="/icons/Stack.svg"
+                    alt=""
                 />
                 <h3 class="single__overview-title">Job Level:</h3>
                 <p class="single__overview-data">Entry Level</p>
               </li>
               <li class="single__items">
                 <img
-                  class="single__icon"
-                  src="/icons/search.svg"
-                  alt=""
+                    class="single__icon"
+                    src="/icons/search.svg"
+                    alt=""
                 />
                 <h3 class="single__overview-title">Experience</h3>
                 <p class="single__overview-data">$50k-80k/month</p>
               </li>
               <li class="single__items">
                 <img
-                  class="single__icon"
-                  src="/icons/certificate.svg"
-                  alt=""
+                    class="single__icon"
+                    src="/icons/certificate.svg"
+                    alt=""
                 />
                 <h3 class="single__overview-title">sertificat</h3>
                 <p class="single__overview-data">Google Certification</p>
@@ -238,38 +238,38 @@
             <div class="single__links-box">
               <button class="single__links-btn">
                 <img
-                  src="/icons/LinkSimple.svg"
-                  alt=""
-                  class="single__links-icon"
+                    src="/icons/LinkSimple.svg"
+                    alt=""
+                    class="single__links-icon"
                 />
                 Copy Links
               </button>
               <a href="" class="single__link">
                 <img
-                  src="/icons/linkedin.svg"
-                  alt=""
-                  class="single__social-icon"
+                    src="/icons/linkedin.svg"
+                    alt=""
+                    class="single__social-icon"
                 />
               </a>
               <a href="" class="single__link">
                 <img
-                  src="/icons/facebookk.svg"
-                  alt=""
-                  class="single__social-icon"
+                    src="/icons/facebookk.svg"
+                    alt=""
+                    class="single__social-icon"
                 />
               </a>
               <a href="" class="single__link">
                 <img
-                  src="/icons/twitter.svg"
-                  alt=""
-                  class="single__social-icon"
+                    src="/icons/twitter.svg"
+                    alt=""
+                    class="single__social-icon"
                 />
               </a>
               <a href="" class="single__link">
                 <img
-                  src="/icons/email.svg"
-                  alt=""
-                  class="single__social-icon"
+                    src="/icons/email.svg"
+                    alt=""
+                    class="single__social-icon"
                 />
               </a>
             </div>
@@ -282,23 +282,19 @@
       <div class="container mx-auto">
         <h2 class="single__related-title">Related Jobs</h2>
 
-        <ul class="single__related-list">
-          <nuxt-link
-            v-for="item in obj"
-            :key="item.title"
-            to="/jobs/[slug].vue"
-            slug="{name:{{item}}, params: {{ item }}}"
-          >
-            <CardsVacancy :item="item" />
-          </nuxt-link>
-        </ul>
+        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <CardsVacancy v-for="(item, idx) in obj" :item="item" :key="idx"/>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { obj } from "@/constants";
+import {obj} from "@/constants";
+
+const route = useRoute()
+const currentItem = computed(jobsCard.find(item => item.title == route.params.slug))
 </script>
 
 <style scoped>

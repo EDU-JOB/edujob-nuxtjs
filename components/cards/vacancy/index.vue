@@ -10,8 +10,9 @@
   >
     <div class="vacancy__box-title">
       <h3 class="vacancy__title">{{ item.title }}</h3>
-      <span class="vacancy__category">{{ item.category }}</span>
-      <span class="vacancy__salary">Salary: {{ item.salary }}</span>
+      <!--      <span class="vacancy__category">{{ item.category }}</span>-->
+      <span class="vacancy__salary">Salary: {{ item.minSalary }} {{ item.maxSalary }}</span>
+
     </div>
 
     <div class="vacancy__box">
@@ -35,15 +36,10 @@
 <script setup lang="ts">
 // import { defineProps } from 'vue'
 const recommend = ref(false);
+import type {jobsCardType} from "~/types";
 
 interface Props {
-  item: {
-    title: string;
-    category: string;
-    salary: string;
-    img: string;
-    recommend: boolean;
-  };
+  item: jobsCardType
 }
 
 defineProps<Props>();

@@ -3,29 +3,24 @@
     <div class="jobs__tab">
       <div class="container mx-auto flex justify-between">
         <h2 class="jobs__title">Ish O’rinlari</h2>
-        <div class="jobs__navi">
-          <span class="jobs__navi-link">home</span>
-          <span class="jobs__navi-link active">/ Jobs</span>
-        </div>
+        <Breadcrumb :menu="menu"/>
       </div>
     </div>
 
-    <inputCard />
-
-    <ul class="container jobs__list">
-      <nuxt-link
-        v-for="item in obj"
-        :key="item.title"
-        :to="{ params: { slug: item.title } }"
-      >
-        <CardsVacancy :item="item" />
-      </nuxt-link>
-    </ul>
+    <inputCard/>
+    <div class="container grid grid-cols-3 gap-3">
+      <CardsVacancy v-for="(item, idx) in jobsCard" :item="item" :key="idx"/>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { obj } from "@/constants";
+
+import {jobsCard} from "@/constants";
+
+const menu = computed(() => [
+  {link: '/jobs', title: 'Find job'}
+])
 </script>
 
 <style scoped>

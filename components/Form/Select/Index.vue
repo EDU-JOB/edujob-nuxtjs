@@ -43,14 +43,14 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+
 import {useIntersectionObserver} from "@vueuse/core";
 
 interface Props {
   list: Array<object>;
   label?: string;
-  valueKey?: string;
-  labelKey?: string;
+  valueKey?: any;
+  labelKey?: any;
   iconKey?: string;
   error?: boolean;
   disabled?: boolean;
@@ -72,7 +72,7 @@ const emit = defineEmits<{
 }>();
 
 const isDropdownOpen = ref(false);
-const currentItem = ref("");
+const currentItem = ref<string>("");
 
 const allItemsTarget = ref(null);
 const allItemsIsVisible = ref(false);
