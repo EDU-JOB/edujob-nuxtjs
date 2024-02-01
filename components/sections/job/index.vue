@@ -1,16 +1,18 @@
 <template>
   <section>
     <div class="container">
-      <UiTitle :title="$t('featured_job')" :linkText="$t('view_all')"/>
+      <UiTitle :title="$t('featured_job')" :linkText="$t('view_all')" link="/jobs"/>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
-        <CardsVacancy v-for="el in obj" :key="el.title" :item="el"/>
+        <CardsVacancy v-for="el in cards" :key="el.id" :item="el"/>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import {obj} from '~/constants';
+import {jobsCard} from '~/constants';
+
+const cards = jobsCard.filter((el, idx) => idx <= 5)
 </script>
 
 <style scoped lang="scss">

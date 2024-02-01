@@ -26,11 +26,31 @@ export const navLink = [
 ];
 
 export const jobsCard = [
-    {title: 'Export Import Management (EXIM)', minSalary: 2000, maxSalary: 7000, qty: 10000, id: 1},
-    {title: 'International Logistics Management (ILM)', minSalary: 2000, maxSalary: 7000, qty: 10000, id: 1},
-    {title: 'Supply Chain Management', minSalary: 2000, maxSalary: 7000, qty: 10000, id: 1},
-    {title: 'Business Management', minSalary: 2000, maxSalary: 7000, qty: 10000, id: 1},
+    {title: 'Export Import Management (EXIM)', min: 2000, max: 7000, qty: 10000, id: 1},
+    {title: 'International Logistics Management (ILM)', min: 1500, max: 4500, qty: 5000, id: 2},
+    {title: 'Supply Chain Management', min: 2000, max: 7000, qty: 50000, id: 3},
+    {title: 'Business Management', min: 1000, max: 3000, qty: 100000, id: 4},
+    {title: 'Sales & Marketing Management', min: 2000, max: 7000, qty: 100000, id: 5},
+    {title: 'Finance Management', min: 2000, max: 5000, qty: 25000, id: 6},
+    {title: 'HR Management', min: 1000, max: 4000, qty: 5000, id: 7},
+    {title: 'Hospitality and Tourism', min: 1000, max: 4000, qty: 5000, id: 8},
+    {title: 'Tourism and Travel Management', min: 1000, max: 5000, qty: 2000, id: 9},
+    {title: 'IT Project Management', min: 1000, max: 3000, qty: 2000, id: 10},
+    {title: 'Healthcare Management', min: 500, max: 2000, qty: 5000, id: 11},
+    {title: 'Industrial Safety', min: 500, max: 2000, qty: 3000, id: 12},
+    {title: 'Construction Safety', min: 500, max: 2000, qty: 3000, id: 13},
+    {title: 'Chemical Safety', min: 1000, max: 3000, qty: 1000, id: 14},
+    {title: 'Risk Management', min: 1000, max: 3000, qty: 1000, id: 15},
+    {title: 'Risk Assessments - Risk Analysis and Management', min: 1000, max: 3000, qty: 1000, id: 16},
+    {title: 'Event Management Assistant', min: 500, max: 3000, qty: 3000, id: 17},
+    {title: 'Digital Marketing', min: 500, max: 2000, qty: 20000, id: 18},
+    {title: 'Fashion Designing', min: 500, max: 2000, qty: 5000, id: 19},
+    {title: 'Project Management Professionals', min: 1000, max: 5000, qty: 4000, id: 20},
+    {title: 'Catering and Hospitality Assistant', min: 500, max: 2000, qty: 2000, id: 21},
+    {title: 'Strategic Manufacturing Sector Skill Council', min: 1000, max: 3000, qty: 1000, id: 22},
+
 ]
+
 export const languageSwitcherData = [
     {locale: "ru", title: "Рус", img: "/flags/rus-flag.png"},
     {locale: "en", title: "Eng", img: "/flags/eng-flag.png"},

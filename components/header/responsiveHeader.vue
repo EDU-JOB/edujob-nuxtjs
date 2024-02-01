@@ -28,8 +28,8 @@
       </div>
     </div>
     <Transition name="fade" mode="out-in">
-      <div :class="{'left-0 top-0 transition-200 bg-red':state}"
-           class="lg:hidden fixed  top-0 left-full  transition-200 z-40 bg-white w-full max-h-screen overflow-y-auto">
+      <div :class="{'-left-0 top-0 transition-200 bg-red opacity-100 ':state}"
+           class="lg:hidden fixed  top-0 -left-full opacity-0  transition-200 z-40 bg-white w-full max-h-screen overflow-y-auto">
         <div class="border-b border-gray-600 p-4 w-[95%] my-4 m-auto">
           <div @click="state = !state" class="cursor-pointer text-gray-900">
             <i class="icon-close"></i>

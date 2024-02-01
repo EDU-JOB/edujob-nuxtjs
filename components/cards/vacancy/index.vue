@@ -2,16 +2,11 @@
   <nuxt-link
       to="/jobs"
       class="vacancy"
-      :style="{
-      background: item.recommend
-        ? 'linear-gradient(90deg, #fff6e6 0%, #fff 100%), #fff'
-        : '',
-    }"
+
   >
     <div class="vacancy__box-title">
       <h3 class="vacancy__title">{{ item.title }}</h3>
-      <!--      <span class="vacancy__category">{{ item.category }}</span>-->
-      <span class="vacancy__salary">Salary: {{ item.minSalary }} {{ item.maxSalary }}</span>
+      <span class="vacancy__salary">Salary: {{ item.min }}$-{{ item.max }}$</span>
 
     </div>
 

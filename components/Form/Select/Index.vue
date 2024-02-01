@@ -43,14 +43,14 @@
 </template>
 
 <script setup lang="ts">
-
+import {ref} from "vue";
 import {useIntersectionObserver} from "@vueuse/core";
 
 interface Props {
   list: Array<object>;
   label?: string;
-  valueKey?: any;
-  labelKey?: any;
+  valueKey?: string | undefined;
+  labelKey?: string | undefined;
   iconKey?: string;
   error?: boolean;
   disabled?: boolean;

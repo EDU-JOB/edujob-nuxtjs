@@ -1,7 +1,7 @@
 export interface jobsCardType {
     title: string,
-    minSalary: number,
-    maxSalary: number,
+    min: number,
+    max: number,
     qty: number,
     id: number
 }
