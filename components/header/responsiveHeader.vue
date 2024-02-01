@@ -8,7 +8,7 @@
             <i class="icon-call text-xl text-black group-hover:text-blue transition-200"></i>
             <span>+99875-555-01-78</span>
           </a>
-          <LanguageSwitcher switcher-class="!-translate-x-0 gap-1"/>
+          <LanguageSwitcher list-class="!left-0"/>
         </div>
         <div @click="state = !state" class="cursor-pointer">
           <i class="icon-menu text-gray-900 text-2xl"></i>
@@ -21,16 +21,15 @@
       </nuxt-link>
       <div class="flex-y-center gap-4">
         <i class="icon-search text-xl text-gray-900"></i>
-        <div class="hidden sm:block">
-          <el-button type="primary" plain>Sign in</el-button>
-        </div>
-        <div>
-          <el-button type="primary">Post a Jobs</el-button>
+        <div class="btn-group flex-y-center gap-3">
+          <Button :text="$t('sign')" size="sm" variant="outline" class="max-sm:hidden"/>
+          <Button :text="$t('post_job')" size="sm"/>
         </div>
       </div>
     </div>
     <Transition name="fade" mode="out-in">
-      <div v-if="state" class="lg:hidden fixed top-0 lef-0 z-20 bg-white w-full max-h-screen overflow-y-auto">
+      <div :class="{'left-0 top-0 transition-200 bg-red':state}"
+           class="lg:hidden fixed  top-0 left-full  transition-200 z-40 bg-white w-full max-h-screen overflow-y-auto">
         <div class="border-b border-gray-600 p-4 w-[95%] my-4 m-auto">
           <div @click="state = !state" class="cursor-pointer text-gray-900">
             <i class="icon-close"></i>
@@ -127,5 +126,13 @@ const options = [
 <style lang="scss">
 @import url("./index.scss");
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.4s;
+}
 
+.fade-enter-from,
+.fade-leave-to {
+  filter: grayscale(1);
+}
 </style>

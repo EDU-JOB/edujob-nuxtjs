@@ -1,10 +1,16 @@
 <template>
   <section class="company">
     <div class="container">
-      <div class="company-title">
-        <h2>Top companies</h2>
-        <i class="icon-buildings"></i>
-      </div>
+      <UiTitle :title="$t('top_companies')">
+        <div class="flex-y-center gap-3">
+          <Button variant="light" :adaptive="true">
+            <i class="icon-arrow-lefr"></i>
+          </Button>
+          <Button variant="light" :adaptive="true">
+            <i class="icon-arrow-right"></i>
+          </Button>
+        </div>
+      </UiTitle>
       <div class="company-car grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <div v-for="el in 6" class="company-cards__item">
           <div class="company-cards__item-content">
@@ -28,7 +34,8 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <style scoped>
 .company {

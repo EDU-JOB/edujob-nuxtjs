@@ -47,13 +47,14 @@ module.exports = {
                     200: "#f7f9faa3",
                     250: "#FCFCFC",
                 },
-                blue: {
+                primary: {
                     DEFAULT: "#0A65CC",
                     50: '#E7F0FA',
                     100: "#CEE0F5",
                     200: "#9DC1EB",
                     300: "#6CA3E0",
                     400: '#3B84D6',
+                    500: '#0A65CC',
                     600: '#0851A3'
                 },
                 red: {

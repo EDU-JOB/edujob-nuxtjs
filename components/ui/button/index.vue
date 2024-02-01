@@ -1,10 +1,12 @@
 <template>
   <button
-    class="active:scale-95 flex justify-center items-center gap-1 transition-all"
-    :class="[sizes[size], variants[variant], wrapperClass]"
+      class="active:scale-95 flex justify-center items-center gap-1 transition-all"
+      :class="[sizes[size], variants[variant], wrapperClass, {'px-4 py-2 rounded-[3px] text-sm md:text-base md:px-6 md:py-3 md:rounded': adaptive}]"
   >
     <slot name="prefix"></slot>
-    <span :class="textClass">{{ text }}</span>
+    <slot>
+      <span :class="[textClass, {'text-sm md:text-base':adaptive}]">{{ text }}</span>
+    </slot>
     <slot name="suffix"></slot>
   </button>
 </template>
@@ -15,11 +17,13 @@ interface Props {
   textClass?: string
   disabled?: boolean
   loading?: boolean
-  variant?: 'red' | 'light' | 'gray'
+  variant?: 'outline' | 'light' | 'primary'
   size?: 'sm' | 'md' | 'lg'
   iconName?: string
   wrapperClass?: string
+  adaptive?: boolean
 }
+
 withDefaults(defineProps<Props>(), {
   text: 'Button',
   type: 'button',
@@ -27,23 +31,20 @@ withDefaults(defineProps<Props>(), {
   shadowColor: '',
   disabled: false,
   loading: false,
-  variant: 'red',
+  adaptive: false,
+  variant: 'primary',
   size: 'md',
   iconName: '',
 })
+
 const sizes = {
-  sm: 'px-4 py-2 rounded-md text-xs',
-  md: 'px-5 py-[10px] rounded-lg text-sm',
-  lg: 'px-6 py-3 rounded-lg text-base',
+  sm: 'px-4 py-2 rounded-[3px] text-sm ',
+  md: 'px-6 py-3 rounded-[3px] ',
+  lg: 'px-8 py-4 rounded',
 }
 const variants = {
-  red: 'bg-red text-white hover:bg-red-extra red-shadow',
-  light: 'bg-light text-red hover:bg-light-extra',
-  gray: 'bg-gray-400 text-dark hover:opacity-70',
+  primary: 'bg-primary text-white hover:bg-primary-600 transition-200',
+  light: 'bg-primary-50 text-primary hover:bg-primary-100 text-primary-600 transition-200',
+  outline: ' text-primary border border-primary-100  hover:bg-primary-100 hover:primary-600 hover:border-primary transition-200',
 }
 </script>
-<style>
-.red-shadow {
-  box-shadow: 0px 3px 20px 0px rgba(255, 13, 73, 0.2);
-}
-</style>

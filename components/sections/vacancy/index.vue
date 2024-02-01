@@ -1,7 +1,8 @@
 <template>
   <section class="vacancy">
     <div class="container vacancy-wrapper">
-      <Title title="Oma Bop Vakansiyalar"/>
+      <ui-title :title="$t('popular_vacancies')"/>
+
       <div class="vacancy-wrapper__content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 my-6">
         <div v-for="el in options" :key="el.id" class="vacancy-card">
           <h3 class="md:text-xl">{{ el.title }}</h3>
@@ -13,6 +14,8 @@
 </template>
 
 <script setup lang="ts">
+import UiTitle from "~/components/ui/UiTitle.vue";
+
 interface Props {
   title?: string;
   options: {

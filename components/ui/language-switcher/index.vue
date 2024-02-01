@@ -1,69 +1,103 @@
 <template>
-  <div :class="switcherClass" class="">
-    <Dropdown
-        :options="languageSwitcherData"
-        value-key="descr"
-        label-key="title"
-        class-name="right-0"
-        :optionsWrapperClass="switcherClass"
+  <div class="flex items-center relative">
+    <div ref="list" @click="state = !state" :class="wrapperClass" class="cursor-pointer flex-y-center gap-3 ">
+      <img :src="currentLanguage?.flag" class="h-4 aspect-video" :alt="currentLanguage?.name + 'flag'">
+      <p
+
+          class="flex-y-center"
+      >
+        {{ currentLanguage?.name }}
+        <i class="icon-chevron-down  text-xl mx-2 transition-200"
+           :class="{'rotate-180 transition-200':state}"></i>
+      </p>
+    </div>
+
+    <ul
+
+        v-if="state"
+        :class="listClass"
+        class="border border-gray-100 shadow-md absolute translate-y-20 rounded-lg  overflow-hidden right-0"
     >
-      <template #header>
-        <div class="flex items-center">
-          <img
-              :src="currentLocale?.img"
-              alt="uk-icon"
-              class="cursor-pointer w-[30px]"
-          />
-          <span class="text-sm font-medium ml-2">
-            {{ currentLocale?.title }}
-          </span>
-        </div>
-      </template>
-      <template v-slot:option="slotData">
-        <div
-            @click="$i18n.locale = slotData.data.locale"
-            class="text-white flex items-center justify-between gap-x-2 p-2 rounded-lg hover:bg-white/10 group transition-all"
-            :class="{ 'bg-white/10 ': $i18n.locale == slotData.data.locale }"
-        >
-          <div class="flex items-center gap-1">
-            <img
-                :src="slotData.data.img"
-                :alt="slotData.data.title"
-                class="w-[30px]"
-            />
-            <h2 class="text-sm">
-              {{ slotData.data.title }}
-            </h2>
-          </div>
-          <div
-              class="opacity-0"
-              :class="{ 'opacity-100': $i18n.locale == slotData.data.locale }"
-          ></div>
-        </div>
-      </template>
-    </Dropdown>
+      <li
+          v-for="element in languagesList"
+          @click="[changeLocale(element.code), state = false]"
+          :class="{'!bg-primary-50':element.name == currentLanguage?.name}"
+          class=" flex-y-center gap-2 border-b border-b-gray-100 last:border-b-0 text-sm cursor-pointer bg-white hover:bg-primary-100 p-2 "
+      >
+        <img :src="element?.flag" :alt="element?.name + 'flag'" class="h-4 aspect-video object-cover">
+        <p>{{ element?.name }}</p>
+      </li>
+    </ul>
   </div>
+
 </template>
-
 <script setup lang="ts">
-import {languageSwitcherData} from "@/constants/index";
+import {onClickOutside} from '@vueuse/core'
+import {useLanguageSwitcher,} from "~/composables/useLanguageSwitcher";
 
-import {useI18n} from "vue-i18n";
-import {computed} from "vue";
+const {changeLocale, currentLanguage, languagesList} = useLanguageSwitcher();
 
-const {locale} = useI18n();
+const state = ref(false);
+const list = ref(null)
+onClickOutside(list, () => state.value = false)
 
 interface Props {
-  switcherClass?: string;
+  wrapperClass: string
+  listClass: string
 }
 
-defineProps<Props>();
-
-// const currentLocale = languageSwitcherData[0]
-
-const currentLocale = computed(() =>
-    languageSwitcherData.find((element) => element?.locale === locale.value)
-);
+defineProps<Props>()
 </script>
+<!--<script lang="ts" setup>-->
+<!--import {ref} from "vue";-->
+<!--import {useI18n} from "vue-i18n";-->
+<!--import {useMediaQuery} from "@vueuse/core";-->
 
-<style scoped></style>
+<!--const {locale} = useI18n();-->
+<!--console.log(locale)-->
+
+<!--interface ILanguage {-->
+<!--  value: string;-->
+<!--  name: string;-->
+<!--}-->
+
+<!--interface Props {-->
+<!--  showIcon?: boolean;-->
+<!--  headerClass?: string;-->
+<!--  buttonClass?: string;-->
+<!--  withIcon?: boolean;-->
+<!--}-->
+
+<!--defineProps<Props>();-->
+
+<!--const _locale = useCookie("locale")-->
+
+<!--const languageList = ref<ILanguage[]>([-->
+<!--  {value: "uz", name: "O'zbekcha"},-->
+<!--  {value: "uzc", name: "Ўзбекча"},-->
+<!--  {value: "ru", name: "Русский"},-->
+<!--]);-->
+
+<!--const activeLanguage = ref<ILanguage | undefined>({-->
+<!--  value: "uz",-->
+<!--  name: "O'zbekcha",-->
+<!--});-->
+<!--const dropDownActive = ref(false);-->
+
+<!--const changeLanguage = (item: { value: string; name: string }) => {-->
+<!--  console.log('cange locale')-->
+<!--  _locale.value = item.value;-->
+
+<!--  dropDownActive.value = false;-->
+<!--  if (activeLanguage.value?.value !== item.value) {-->
+<!--    window.location.reload();-->
+<!--  }-->
+<!--};-->
+
+<!--// locale.value = _locale.value-->
+<!--activeLanguage.value =-->
+<!--    languageList.value.find((language) => language.value === locale.value) ||-->
+<!--    languageList.value[0];-->
+<!--console.log(locale.value)-->
+<!--const isMobile = useMediaQuery("(max-width: 600px)");-->
+<!--</script>-->

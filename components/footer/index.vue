@@ -12,9 +12,9 @@
         <div v-for="el in footerLink" class="">
           <h2 class="text-light sm:text-xl md:sm:text-2xl font-bold">{{ el.title }}</h2>
           <div class="text-gray flex flex-col gap-1 md:gap-2 mt-2 md:mt-4">
-            <nuxt-link v-for="link in el.links" :to="link.path" class="flex-y-center gap-2 text-sm md:text-base">
-              <i class="icon-arrow-right text-light my-auto"></i>
-              <span>{{ link.title }}</span>
+            <nuxt-link v-for="link in el.links" :to="link.path" class="flex-y-center group gap-2 text-sm md:text-base">
+              <i class="icon-arrow-right text-light my-auto opacity-0 -translate-x-4 group-hover:-translate-x-0 group-hover:opacity-100 transition-200"></i>
+              <span class="-translate-x-5 group-hover:-translate-x-0 transition-200">{{ link.title }}</span>
             </nuxt-link>
           </div>
         </div>

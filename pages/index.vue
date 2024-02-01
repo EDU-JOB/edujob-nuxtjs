@@ -11,31 +11,31 @@
         </p>
         <div class="md:inline-block">
           <div class="form flex flex-col md:flex-row gap-4 p-3 bg-white rounded-lg border border-gray-100">
-            <Input
+            <FormInput
                 v-model="jobTitle"
                 placeholder="Job tittle, Keyword..."
                 type="text"
             >
               <template #prefix>
 
-                <i class="icon-search text-blue mr-2 text-xl"></i>
+                <i class="icon-search text-primary mr-2 text-xl"></i>
               </template>
-            </Input>
-            <Input
+            </FormInput>
+            <FormInput
                 placeholder="Manzilni Kiriting"
                 v-model="address"
                 type="text"
             >
               <template #prefix>
-                <i class="icon-location text-blue mr-2 text-xl"></i>
+                <i class="icon-location text-primary mr-2 text-xl"></i>
               </template>
-            </Input>
-            <el-button type="primary" size="large">Qidirsh</el-button>
+            </FormInput>
+            <Button text="Qidirsh"/>
           </div>
         </div>
         <p class="text-sm md:text-base mt-4">
           <span class="text-gray-300">Yo’nalishlar</span> : Designer, Programing,
-          <span class="text-blue">Digital Marketing</span>, Video,
+          <span class="text-primary">Digital Marketing</span>, Video,
           Animation.
         </p>
       </div>
@@ -112,10 +112,10 @@ const data = ref<NavLinkType>({
 //  border-radius: 8px;
 //  box-shadow: 0px 12px 40px 0px rgba(0, 44, 109, 0.04);
 //  margin: 24px 0;
-//  &__address-input {
+//  &__address-FormInput {
 //    padding-left: 18px;
 //  }
-//  &__job-input {
+//  &__job-FormInput {
 //    padding-right: 18px;
 //    border-right: 1px solid $light-gray;
 //  }
