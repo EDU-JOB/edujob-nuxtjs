@@ -3,7 +3,6 @@
     <div class="single__tab">
       <div class="container mx-auto flex justify-between">
         <h2 class="single__title">Job Details</h2>
-        <pre>{{ currentItem }}</pre>
         <div class="single__navi">
           <span class="single__navi-link">home /</span>
           <span class="single__navi-link">Job /</span>
