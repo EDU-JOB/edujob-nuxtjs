@@ -2,7 +2,8 @@
   <section class="single">
     <div class="single__tab">
       <div class="container mx-auto flex justify-between">
-        <h2 class="single__title">Job Details {{ route }}</h2>
+        <h2 class="single__title">Job Details</h2>
+        <pre>{{ currentItem }}</pre>
         <div class="single__navi">
           <span class="single__navi-link">home /</span>
           <span class="single__navi-link">Job /</span>
@@ -17,7 +18,7 @@
         <img src="/icons/fecebook.png" alt="" class="single__logo"/>
 
         <div class="single__wrapper">
-          <h2 class="single__title">Senior UX Designer</h2>
+          <h2 class="single__title">{{ currentItem?.title }}</h2>
           <span class="single__company-name">at Facebook</span>
           <span class="single__category">FULL-TIME</span>
           <span class="single__featured">Featured</span>
@@ -158,7 +159,7 @@
         <div class="single__top">
           <div class="single__box1">
             <h3 class="single__salary">Salary (USD)</h3>
-            <span class="single__salary-year">$100,000 - $120,000</span>
+            <span class="single__salary-year">${{ currentItem?.min }}-${{ currentItem?.max }}</span>
             <span class="single__yearly">Yearly salary</span>
           </div>
           <div class="single__box1">
@@ -282,7 +283,7 @@
       <div class="container mx-auto">
         <h2 class="single__related-title">Related Jobs</h2>
 
-        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           <CardsVacancy v-for="(item, idx) in obj" :item="item" :key="idx"/>
         </div>
       </div>
@@ -291,10 +292,10 @@
 </template>
 
 <script setup lang="ts">
-import {obj} from "@/constants";
+import {jobsCard, obj} from "@/constants";
 
 const route = useRoute()
-const currentItem = computed(jobsCard.find(item => item.title == route.params.slug))
+const currentItem = computed(() => jobsCard.find(item => item.title == route.params.slug))
 </script>
 
 <style scoped>
