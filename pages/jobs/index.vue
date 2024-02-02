@@ -1,15 +1,20 @@
 <template>
-  <section id="jobs">
-    <div class="jobs__tab">
-      <div class="container mx-auto flex justify-between">
-        <h2 class="jobs__title">Ish O’rinlari</h2>
+  <section class="p-0">
+    <div class="pt-6 pb-6">
+      <div class="container flex items-center justify-between mb-5">
+        <h2 class="text-#18191c] leading-7 font-medium text-lg">Find Job</h2>
         <Breadcrumb :menu="menu"/>
+      </div>
+
+      <div class="container">
+        <inputCard/>
       </div>
     </div>
 
-    <inputCard/>
-    <div class="container grid grid-cols-3 gap-3">
-      <CardsVacancy v-for="(item, idx) in jobsCard" :item="item" :key="idx"/>
+    <div class="bg-white">
+      <div class="container grid grid-cols-3 gap-4 pb-16 pt-5 md:grid-cols-2 sm:grid-cols-1" >
+        <CardsVacancy v-for="(item, idx) in jobsCard" :item="item" :key="idx"/>
+      </div>
     </div>
   </section>
 </template>
@@ -24,5 +29,5 @@ const menu = computed(() => [
 </script>
 
 <style scoped>
-@import url(./index.scss);
+/* @import url(./index.scss);*/
 </style>

@@ -1,26 +1,28 @@
 <template>
-  <div class="container bg-white p-2">
-    <div class="flex-center-between">
+  <div class="container bg-white p-3 rounded-8">
+    <div class="flex-center-between md:flex-column">
 
-      <FormInput placeholder="Job tittle, Keyword...">
+      <FormInput class="border-r border-r-solid " placeholder="Job tittle, Keyword...">
         <template #prefix>
-          <i class="icon-search"></i>
+          <i class="icon-search mr-1 text-primary"></i>
         </template>
       </FormInput>
-      <FormInput placeholder="Job tittle, Keyword...">
+      <FormInput class="border-r border-r-solid " placeholder="Job tittle, Keyword...">
         <template #prefix>
-          <i class="icon-search"></i>
+          <i class="icon-location mr-1 text-primary"></i>
         </template>
       </FormInput>
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 flex items-center pl-3">
+
+          <i class="icon-category text-primary"></i>
 
         <FormSelect
             :list="selectObj"
             label-key="title"
             label="title"
             value-key="id"
-            placeholder="tanlash"
-            class=""
+            placeholder="Select Category"
+            class="border-r border-r-solid"
         ></FormSelect>
       </div>
       <div class="flex-shrink-0">
@@ -30,8 +32,8 @@
             label-key="title"
             label="title"
             value-key="id"
-            placeholder="tanlash"
-            class=""
+            placeholder="Advance Filter"
+            class="mr-3"
         ></FormSelect>
       </div>
       <div class="flex-shrink-0">
