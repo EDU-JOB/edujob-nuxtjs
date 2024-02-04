@@ -1,30 +1,40 @@
 <template>
+<<<<<<< HEAD
   <label
+=======
+    <label
+      v-if="mounted"
+>>>>>>> c47fd3ba58038a498cdc2b9aa4b97fba373afe1e
       class="bg-dark-700 rounded-lg flex items-center border border-dark-350 focus-within:border-blue transition-all duration-300 group pr-0.5 py-1"
       :class="[inputClass, { '!border-[red]': error }]"
-  >
-    <div class="flex items-center w-full">
+    >
+      <div class="flex items-center w-full">
         <textarea
-            :id="`a-textarea-${id}`"
-            :value="modelValue"
-            :autocomplete="autocomplete"
-            v-bind="{ minlength, maxlength, max, min, placeholder }"
-            class="group"
-            :class="[
+          :id="`a-textarea-${id}`"
+          :value="modelValue"
+          :autocomplete="autocomplete"
+          v-bind="{ minlength, maxlength, max, min, placeholder }"
+          class="group"
+          :class="[
             'outline-none w-full bg-transparent h-full leading-[125%] placeholder:text-[#4D555A] placeholder:font-medium text-light font-medium text-base md:text-sm px-2 md:px-3 py-1.5 pb-3.5 md:py-2.5 md:pb-6',
             inputStyle,
           ]"
-            :pattern="pattern"
-            :required="required"
-            @input="handleInput"
-            @blur="handleBlur"
-            @keyup.enter="handleSubmit"
+          :pattern="pattern"
+          :required="required"
+          @input="handleInput"
+          @blur="handleBlur"
+          @keyup.enter="handleSubmit"
         ></textarea>
-    </div>
-  </label>
+      </div>
+    </label>
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+import { useMounted } from "~/composables/useMounted";
+
+const { mounted } = useMounted();
+
 interface Props {
   type?: string;
   placeholder?: string;
@@ -40,11 +50,12 @@ interface Props {
   inputStyle?: string;
   optional?: boolean;
   autocomplete?: string;
+  maska?: object;
   pattern?: string;
   required?: boolean;
   suffixClass?: string;
   inputCustomClass?: string;
-  isCount?: boolean
+  isCount? :boolean
 }
 
 withDefaults(defineProps<Props>(), {
