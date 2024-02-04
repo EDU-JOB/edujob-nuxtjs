@@ -12,7 +12,7 @@
     </div>
 
     <div class="bg-white">
-      <div class="container grid grid-cols-3 gap-4 pb-16 pt-5 md:grid-cols-2 sm:grid-cols-1" >
+      <div class="container grid grid-cols-1 gap-4 pb-16 pt-5 md:grid-cols-2 lg:grid-cols-3">
         <CardsVacancy v-for="(item, idx) in jobsCard" :item="item" :key="idx"/>
       </div>
     </div>
@@ -20,9 +20,9 @@
 </template>
 
 <script setup lang="ts">
-import { jobsCard } from '@/constants';
+import {jobsCard} from '@/constants';
 
-const menu = computed(() => [{ link: '/jobs', title: 'Find job' }]);
+const menu = computed(() => [{link: '/jobs', title: 'Find job'}]);
 </script>
 
 <style scoped>

@@ -21,7 +21,7 @@
             'pointer-events-none': index === menu.length - 1,
             '!text-[#6D7274]': index < menu.length - 1,
           }"
-            class="transition-200 flex cursor-pointer items-center text-text-gray-900 font-semibold leading-130 min-w-max text-sm hover:!text-white breadcrumb-menu"
+            class="transition-200 flex cursor-pointer items-center text-text-gray-900 font-semibold hover:text-gray-900 leading-130 min-w-max text-sm  breadcrumb-menu"
         >
           {{ item?.title }}
         </NuxtLink>
