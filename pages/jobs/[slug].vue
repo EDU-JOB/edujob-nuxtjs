@@ -1,13 +1,16 @@
 <template>
-	<section class="single p-0">
-		<div class="single__tab">
-			<div class="container flex items-center justify-between">
-				<h2 class="text-lg font-medium leading-7 text-[#18191c]">
-					Job Details
-				</h2>
-				<Breadcrumb :menu="menu" />
-			</div>
-		</div>
+  <section class="single">
+    <div class="single__tab">
+      <div class="container mx-auto flex justify-between">
+        <h2 class="single__title">Job Details {{ route }}</h2>
+        <div class="single__navi">
+          <span class="single__navi-link">home /</span>
+          <span class="single__navi-link">Job /</span>
+          <span class="single__navi-link">Graphics & Design /</span>
+          <span class="single__navi-link active">Job Details</span>
+        </div>
+      </div>
+    </div>
 
 		<div class="bg-white p-8">
 			<div
@@ -20,11 +23,13 @@
 						class="single__logo w-[30px] h-[30px] mb-3"
 					/>
 
-					<div
-						class="single__wrapper flex flex-col gap-2 items-start mb-5 lg:block"
-					>
-						<h2 class="single__title">{{ currentItem?.title }}</h2>
-						<span class="single__company-name">at Facebook</span>
+        <div class="single__wrapper">
+          <h2 class="single__title">Senior UX Designer</h2>
+          <span class="single__company-name">at Facebook</span>
+          <span class="single__category">FULL-TIME</span>
+          <span class="single__featured">Featured</span>
+        </div>
+      </div>
 
 						<span class="single__category">FULL-TIME</span>
 						<span class="single__featured">Featured</span>
@@ -129,47 +134,23 @@
 						</li>
 					</ul>
 
-					<h2 class="single__benefits">Benefits</h2>
-					<ul class="single__list">
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Early finish on Fridays for our end of week catch up (4:30 finish,
-							and drink of your choice from the bar)
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							28 days holiday (including bank holidays) rising by 1 day per year
-							PLUS an additional day off on your birthday
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Generous annual bonus.
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Healthcare package
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Paid community days to volunteer for a charity of your choice
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							£100 contribution for your own personal learning and development
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Free Breakfast on Mondays and free snacks in the office
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Access to Perkbox with numerous discounts plus free points from
-							the company to spend as you wish.
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Cycle 2 Work Scheme
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Brand new MacBook Pro
-						</li>
-						<li class="single__item md:w-[500px] lg:w-[634px]">
-							Joining an agency on the cusp of exponential growth and being part
-							of this exciting story.
-						</li>
-					</ul>
-				</div>
+      <div class="single__right">
+        <div class="single__top">
+          <div class="single__box1">
+            <h3 class="single__salary">Salary (USD)</h3>
+            <span class="single__salary-year">$100,000 - $120,000</span>
+            <span class="single__yearly">Yearly salary</span>
+          </div>
+          <div class="single__box1">
+            <img
+                src="/icons/location.svg"
+                alt=""
+                class="single__location-icon"
+            />
+            <h3 class="single__location-title">Job Location</h3>
+            <span class="single__location">Dhaka, Bangladesh</span>
+          </div>
+        </div>
 
 				<div class="single__right">
 					<div
@@ -200,116 +181,23 @@
 						<div class="single__overview">
 							<h2 class="single__overview-tit">Job Overview</h2>
 
-							<ul class="single__overview-list">
-								<li class="single__items">
-									<img class="single__icon" src="/icons/post.svg" alt="" />
-									<h3 class="single__overview-title">Job Posted:</h3>
-									<p class="single__overview-data">14 Jun, 2021</p>
-								</li>
-								<li class="single__items">
-									<img class="single__icon" src="/icons/search.svg" alt="" />
-									<h3 class="single__overview-title">Job expire in:</h3>
-									<p class="single__overview-data">14 Aug, 2021</p>
-								</li>
-								<li class="single__items">
-									<img class="single__icon" src="/icons/Stack.svg" alt="" />
-									<h3 class="single__overview-title">Job Level:</h3>
-									<p class="single__overview-data">Entry Level</p>
-								</li>
-								<li class="single__items">
-									<img class="single__icon" src="/icons/Stack.svg" alt="" />
-									<h3 class="single__overview-title">Job Level:</h3>
-									<p class="single__overview-data">Entry Level</p>
-								</li>
-								<li class="single__items">
-									<img class="single__icon" src="/icons/search.svg" alt="" />
-									<h3 class="single__overview-title">Experience</h3>
-									<p class="single__overview-data">$50k-80k/month</p>
-								</li>
-								<li class="single__items">
-									<img
-										class="single__icon"
-										src="/icons/certificate.svg"
-										alt=""
-									/>
-									<h3 class="single__overview-title">sertificat</h3>
-									<p class="single__overview-data">Google Certification</p>
-								</li>
-							</ul>
-						</div>
-						<div class="single__links">
-							<h2 class="single__links-title">Share this job:</h2>
-							<div class="flex items-center gap-2 flex-col md:flex-row">
-								<button class="single__links-btn">
-									<img
-										src="/icons/LinkSimple.svg"
-										alt=""
-										class="single__links-icon"
-									/>
-									Copy Links
-								</button>
-								<div class="flex items-center">
-									<a href="" class="single__link">
-										<img
-											src="/icons/linkedin.svg"
-											alt=""
-											class="single__social-icon"
-										/>
-									</a>
-									<a href="" class="single__link">
-										<img
-											src="/icons/facebookk.svg"
-											alt=""
-											class="single__social-icon"
-										/>
-									</a>
-									<a href="" class="single__link">
-										<img
-											src="/icons/twitter.svg"
-											alt=""
-											class="single__social-icon"
-										/>
-									</a>
-									<a href="" class="single__link">
-										<img
-											src="/icons/email.svg"
-											alt=""
-											class="single__social-icon"
-										/>
-									</a>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="single__related bg-white">
-			<div class="container mx-auto">
-				<UiTitle title="Related jobs" />
+			</div>		
 
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-					<CardsVacancy
-						v-for="(item, idx) in relatedJobs"
-						:item="item"
-						:key="idx"
-					/>
-				</div>
-			</div>
-		</div>
-	</section>
+        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <CardsVacancy v-for="(item, idx) in obj" :item="item" :key="idx"/>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-import { jobsCard } from '@/constants';
+import {obj} from "@/constants";
 
-const route = useRoute();
-const menu = computed(() => [{ link: '/jobs', title: 'Find job' }]);
-const currentItem = computed(() =>
-	jobsCard.find((item) => item.title == route.params.slug),
-);
-
-const relatedJobs = jobsCard.filter((item, idx) => idx <= 5);
+const route = useRoute()
+const currentItem = computed(jobsCard.find(item => item.title == route.params.slug))
 </script>
 
 <style scoped>
