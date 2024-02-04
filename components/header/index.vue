@@ -4,7 +4,7 @@
       <div class="container flex-center-between">
         <nav class="flex-y-center gap-6 ">
           <nuxt-link v-for="el in navLink" :to="el.link"
-                     class="text-sm hover:text-primary py-3 border-b-2 border-b-transparent hover:border-b-primary transition-200">
+                     class="text-sm hover:text-primary py-3 border-b-2 border-b-transparent  transition-200">
             {{
               el.title
             }}
@@ -32,7 +32,7 @@
                 label-key="title"
                 label="title"
                 value-key="id"
-                placeholder="tanlash"
+                :placeholder="t('select')"
                 class=""
             ></FormSelect>
           </div>
@@ -60,8 +60,10 @@
   </header>
 </template>
 <script setup lang="ts">
-import {navLink} from "@/constants/index";
+import {navLink} from "~/constants";
+import {useI18n} from "vue-i18n";
 
+const {t} = useI18n()
 const search = ref("");
 const selectObj = ref([
   {title: "andijon", id: 1},
@@ -69,32 +71,12 @@ const selectObj = ref([
   {title: "namangan", id: 3},
 ]);
 
-// import { useAuthStore } from "~/stores/auth";
-// const authStore = useAuthStore();
-// const show = computed(() => authStore.modalShow);
 
-const {t, locale} = useI18n();
-const language = ref([
-  {
-    label: "O'zbekcha",
-    code: "uz",
-  },
-  {
-    label: "Ўзбекча",
-    code: "uzc",
-  },
-  {
-    label: "Русский",
-    code: "ru",
-  },
-]);
-
-const state = ref(false);
-const currentLocale = computed(
-    () => language.value.find((element) => element?.code === locale.value)?.label
-);
-const open = ref(false);
-const openTags = () => {
-  open.value = !open.value;
-};
 </script>
+<style>
+
+nav .router-link-exact-active {
+  color: var(--el-color-primary) !important;
+  border-bottom: 2px solid var(--el-color-primary) !important;
+}
+</style>

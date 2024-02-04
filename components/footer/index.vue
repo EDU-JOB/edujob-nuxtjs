@@ -14,7 +14,9 @@
           <div class="text-gray flex flex-col gap-1 md:gap-2 mt-2 md:mt-4">
             <nuxt-link v-for="link in el.links" :to="link.path" class="flex-y-center group gap-2 text-sm md:text-base">
               <i class="icon-arrow-right text-light my-auto opacity-0 -translate-x-4 group-hover:-translate-x-0 group-hover:opacity-100 transition-200"></i>
-              <span class="-translate-x-5 group-hover:-translate-x-0 transition-200">{{ link.title }}</span>
+              <span class="-translate-x-5 text-gray-600 group-hover:-translate-x-0 transition-200">{{
+                  link.title
+                }}</span>
             </nuxt-link>
           </div>
         </div>
@@ -26,7 +28,7 @@
           impria_agency</p>
         <div class="flex gap-4 justify-center mt-4">
           <a v-for="el in footerSocial" :href="el.path"
-          ><i :class="el.icon" class="icon-facebook text-gray hover:text-blue md:text-lg"></i></a>
+          ><i :class="el.icon" class=" text-gray hover:text-primary-400 transition-all md:text-lg"></i></a>
         </div>
       </div>
     </div>
@@ -34,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import {footerLink, footerSocial} from "@/constants/index";
+import {footerLink, footerSocial} from "@/constants";
 </script>
 
 <style scoped>

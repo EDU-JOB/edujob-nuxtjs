@@ -173,10 +173,10 @@
 
 				<div class="single__right">
 					<div
-						class="flex items-center p-8 bg-white rounded-8 border-[1px] boeder-solid flex-col md:flex-row md:justify-center  lg:justify-center gap-4"
+						class="flex items-center p-8 bg-white rounded-8 border-[1px] boeder-solid flex-col md:flex-row md:justify-center lg:justify-center gap-4"
 					>
 						<div
-							class="flex items-center flex-col md:px-4 border-r-[1px] border-solid lg:border-r-[1px] border-solid"
+							class="flex items-center border-[0px] flex-col md:px-4 lg:border-r-[1px] border-solid"
 						>
 							<h3 class="single__salary">Salary (USD)</h3>
 							<span class="single__salary-year"
@@ -239,7 +239,7 @@
 						</div>
 						<div class="single__links">
 							<h2 class="single__links-title">Share this job:</h2>
-							<div class="flex flex-col gap-2 items-center md:flex-row">
+							<div class="flex items-center gap-2 flex-col md:flex-row">
 								<button class="single__links-btn">
 									<img
 										src="/icons/LinkSimple.svg"
@@ -248,7 +248,6 @@
 									/>
 									Copy Links
 								</button>
-
 								<div class="flex items-center">
 									<a href="" class="single__link">
 										<img
@@ -284,18 +283,17 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="single__related bg-white">
+			<div class="container mx-auto">
+				<UiTitle title="Related jobs" />
 
-			<div class="single__related">
-				<div class="container mx-auto">
-					<h2
-						class="text-center mb-12 text-[40px] font-medium leading-[48px] text-[#18191c] lg:text-start"
-					>
-						Related Jobs
-					</h2>
-
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-						<CardsVacancy v-for="(item, idx) in obj" :item="item" :key="idx" />
-					</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+					<CardsVacancy
+						v-for="(item, idx) in relatedJobs"
+						:item="item"
+						:key="idx"
+					/>
 				</div>
 			</div>
 		</div>
@@ -303,22 +301,15 @@
 </template>
 
 <script setup lang="ts">
-import { jobsCard, obj } from '@/constants';
+import { jobsCard } from '@/constants';
 
 const route = useRoute();
-const menu = computed(() => [
-	{
-		link: `/jobs`,
-		title: `Find job `,
-	},
-	{
-		link: ``,
-		title: ` Job detalis`,
-	},
-]);
+const menu = computed(() => [{ link: '/jobs', title: 'Find job' }]);
 const currentItem = computed(() =>
 	jobsCard.find((item) => item.title == route.params.slug),
 );
+
+const relatedJobs = jobsCard.filter((item, idx) => idx <= 5);
 </script>
 
 <style scoped>

@@ -51,16 +51,6 @@ export const jobsCard = [
 
 ]
 
-export const languageSwitcherData = [
-    {locale: "ru", title: "Рус", img: "/flags/rus-flag.png"},
-    {locale: "en", title: "Eng", img: "/flags/eng-flag.png"},
-    {
-        locale: "uz",
-        title: "Uzb",
-        img: "/flags/uzb-flag.png",
-    },
-];
-
 export const footerLink = [
     {
         title: "Quick Link",
@@ -193,25 +183,25 @@ export const obj = [
 ];
 export const footerSocial = [
     {
-        icon: "/icons/facebook.svg",
+        icon: "icon-twitter",
         path: "/",
     },
     {
-        icon: "/icons/youtube.svg",
+        icon: "icon-youtube",
         path: "/",
     },
     {
-        icon: "/icons/instagram.svg",
+        icon: "icon-facebook",
         path: "/",
     },
     {
-        icon: "/icons/twitter.svg",
+        icon: "icon-telegram",
         path: "/",
     },
 ];
 export const directionsCard = [
     {
-        icon: "!icon-case",
+        icon: "icon-case",
         title: "1,75,324",
         descr: "Ish O’rinlari",
         id: 1,

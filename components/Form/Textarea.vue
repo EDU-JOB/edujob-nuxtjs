@@ -1,6 +1,5 @@
 <template>
   <label
-      v-if="mounted"
       class="bg-dark-700 rounded-lg flex items-center border border-dark-350 focus-within:border-blue transition-all duration-300 group pr-0.5 py-1"
       :class="[inputClass, { '!border-[red]': error }]"
   >

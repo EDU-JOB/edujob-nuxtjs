@@ -5,3 +5,6 @@ export interface jobsCardType {
     qty: number,
     id: number
 }
+
+// export class NavLinkType {
+// }
