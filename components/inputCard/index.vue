@@ -2,12 +2,12 @@
   <div class="container bg-white p-2">
     <div class="flex-center-between">
 
-      <FormInput placeholder="Job tittle, Keyword...">
+      <FormInput v-model="jobTitle" placeholder="Job tittle, Keyword..." type="text">
         <template #prefix>
           <i class="icon-search"></i>
         </template>
       </FormInput>
-      <FormInput placeholder="Job tittle, Keyword...">
+      <FormInput v-model="jobs" placeholder="Job tittle, Keyword..." type="text">
         <template #prefix>
           <i class="icon-search"></i>
         </template>
@@ -63,6 +63,8 @@
 </template>
 
 <script setup lang="ts">
+const jobTitle = ref('')
+const jobs = ref('')
 const selectObj = ref([
   {title: "andijon", id: 1},
   {title: "fargona", id: 2},

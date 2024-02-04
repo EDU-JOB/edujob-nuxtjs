@@ -280,10 +280,10 @@
 
     <div class="single__related">
       <div class="container mx-auto">
-        <h2 class="single__related-title">Related Jobs</h2>
+        <UiTitle title="Related jobs"/>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          <CardsVacancy v-for="(item, idx) in obj" :item="item" :key="idx"/>
+          <CardsVacancy v-for="(item, idx) in relatedJobs" :item="item" :key="idx"/>
         </div>
       </div>
     </div>
@@ -291,10 +291,12 @@
 </template>
 
 <script setup lang="ts">
-import {jobsCard, obj} from "@/constants";
+import {jobsCard} from "@/constants";
 
 const route = useRoute()
 const currentItem = computed(() => jobsCard.find(item => item.title == route.params.slug))
+
+const relatedJobs = jobsCard.filter((item, idx) => idx <= 5)
 </script>
 
 <style scoped>

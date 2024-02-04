@@ -9,6 +9,7 @@
     >
       <template #head>
         <FormInput
+            type="text"
             :readonly="true"
             :model-value="(labelKey ? currentItem[labelKey] : currentItem) ?? ''"
             input-class="cursor-pointer"
@@ -47,10 +48,10 @@ import {ref} from "vue";
 import {useIntersectionObserver} from "@vueuse/core";
 
 interface Props {
-  list: Array<object>;
+  list: any[];
   label?: string;
-  valueKey?: string | undefined;
-  labelKey?: string | undefined;
+  valueKey?: any;
+  labelKey?: any;
   iconKey?: string;
   error?: boolean;
   disabled?: boolean;

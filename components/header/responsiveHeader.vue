@@ -12,6 +12,7 @@
         </div>
         <div @click="state = !state" class="cursor-pointer">
           <i class="icon-menu text-gray-900 text-2xl"></i>
+          <!--          <i v-else class="icon-close text-gray-900 text-2xl"></i>-->
         </div>
       </div>
     </div>
@@ -28,79 +29,28 @@
       </div>
     </div>
     <Transition name="fade" mode="out-in">
-      <div :class="{'-left-0 top-0 transition-200 bg-red opacity-100 ':state}"
-           class="lg:hidden fixed  top-0 -left-full opacity-0  transition-200 z-40 bg-white w-full max-h-screen overflow-y-auto">
-        <div class="border-b border-gray-600 p-4 w-[95%] my-4 m-auto">
-          <div @click="state = !state" class="cursor-pointer text-gray-900">
-            <i class="icon-close"></i>
-          </div>
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            Asosiy
-            <i class="icon-chevron-right text-2xl"></i>
-          </p>
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            Yangiliklar <i class="icon-chevron-right text-2xl"></i>
-          </p>
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            Kurslar <i class="icon-chevron-right text-2xl"></i>
-          </p>
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            Kutuboxona <i class="icon-chevron-right text-2xl"></i>
-          </p>
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            Bog'lanish <i class="icon-chevron-right text-2xl"></i>
-          </p>
+      <div :class="{'!left-0  transition-200 bg-red opacity-100 ':state}"
+           class="lg:hidden fixed container  -left-full opacity  transition-200 z-40 bg-white w-full h-full rounded-b-6 overflow-y-auto">
+        <div class="flex flex-col ">
+          <router-link v-for="(el, idx) in navLink" :key="idx" :to="el.link"
+                       class="py-2 border-b border-b-gray-100 last:border-b-0">
+            {{ el.title }}
+          </router-link>
         </div>
-        <div class="p-4 w-[95%] my-4 m-auto">
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            <span class="flex items-center">
-              <i class="icon-notification text-2xl mr-2"></i> Xabarnomalar</span
-            >
-            <i class="icon-chevron-right text-2xl"></i>
-          </p>
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            <span class="flex items-center">
-              <i class="icon-shopping-cart text-2xl mr-2"></i> Savatcha</span
-            >
-            <i class="icon-chevron-right text-2xl"></i>
-          </p>
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            <span class="flex items-center">
-              <i class="icon-log-in text-2xl mr-2"></i> Kirish</span
-            >
-            <i class="icon-chevron-right text-2xl"></i>
-          </p>
-          <p
-              class="py-3 px-4 flex items-center justify-between bg-dark-300 my-2 rounded-12 cursor-pointer"
-          >
-            <span class="flex items-center">
-              <i class="icon-globe text-2xl mr-2"></i> O'zbekcha</span
-            >
-            <i class="icon-chevron-down text-2xl"></i>
-          </p>
+        <div class="flex-y-center gap-4 mt-5">
+          <Button variant="primary" :text="t('register_now')" size="sm"/>
+          <Button variant="outline" :text="t('sign')" size="sm"/>
         </div>
       </div>
     </Transition>
   </div>
 </template>
 <script setup lang="ts">
+import {navLink} from "~/constants";
+import {useI18n} from "vue-i18n";
 
+const route = useRoute()
+const {t} = useI18n()
 const search = ref("");
 const state = ref(false)
 watch(
@@ -111,17 +61,13 @@ watch(
           : (document.body.style.overflowY = "auto");
     }
 );
-const options = [
-  {
-    value: "Option1",
-    label: "Option1",
-    img: "",
-  },
-  {
-    value: "Option2",
-    label: "Option2",
-  },
-];
+watch(
+    () => route.path,
+    () => {
+      state.value = false
+      
+    }
+)
 </script>
 <style lang="scss">
 @import url("./index.scss");
@@ -134,5 +80,9 @@ const options = [
 .fade-enter-from,
 .fade-leave-to {
   filter: grayscale(1);
+}
+
+.router-link-exact-active {
+  color: var(--el-color-primary);
 }
 </style>

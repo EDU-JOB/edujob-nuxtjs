@@ -42,62 +42,9 @@ const list = ref(null)
 onClickOutside(list, () => state.value = false)
 
 interface Props {
-  wrapperClass: string
-  listClass: string
+  wrapperClass?: string
+  listClass?: string
 }
 
 defineProps<Props>()
 </script>
-<!--<script lang="ts" setup>-->
-<!--import {ref} from "vue";-->
-<!--import {useI18n} from "vue-i18n";-->
-<!--import {useMediaQuery} from "@vueuse/core";-->
-
-<!--const {locale} = useI18n();-->
-<!--console.log(locale)-->
-
-<!--interface ILanguage {-->
-<!--  value: string;-->
-<!--  name: string;-->
-<!--}-->
-
-<!--interface Props {-->
-<!--  showIcon?: boolean;-->
-<!--  headerClass?: string;-->
-<!--  buttonClass?: string;-->
-<!--  withIcon?: boolean;-->
-<!--}-->
-
-<!--defineProps<Props>();-->
-
-<!--const _locale = useCookie("locale")-->
-
-<!--const languageList = ref<ILanguage[]>([-->
-<!--  {value: "uz", name: "O'zbekcha"},-->
-<!--  {value: "uzc", name: "Ўзбекча"},-->
-<!--  {value: "ru", name: "Русский"},-->
-<!--]);-->
-
-<!--const activeLanguage = ref<ILanguage | undefined>({-->
-<!--  value: "uz",-->
-<!--  name: "O'zbekcha",-->
-<!--});-->
-<!--const dropDownActive = ref(false);-->
-
-<!--const changeLanguage = (item: { value: string; name: string }) => {-->
-<!--  console.log('cange locale')-->
-<!--  _locale.value = item.value;-->
-
-<!--  dropDownActive.value = false;-->
-<!--  if (activeLanguage.value?.value !== item.value) {-->
-<!--    window.location.reload();-->
-<!--  }-->
-<!--};-->
-
-<!--// locale.value = _locale.value-->
-<!--activeLanguage.value =-->
-<!--    languageList.value.find((language) => language.value === locale.value) ||-->
-<!--    languageList.value[0];-->
-<!--console.log(locale.value)-->
-<!--const isMobile = useMediaQuery("(max-width: 600px)");-->
-<!--</script>-->
