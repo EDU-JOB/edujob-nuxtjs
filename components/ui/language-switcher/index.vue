@@ -16,7 +16,7 @@
 
         v-if="state"
         :class="listClass"
-        class="border border-gray-100 shadow-md absolute translate-y-20 rounded-lg  overflow-hidden right-0"
+        class="z-50 border border-gray-100 shadow-md absolute translate-y-20 rounded-lg  overflow-hidden right-0"
     >
       <li
           v-for="element in languagesList"
