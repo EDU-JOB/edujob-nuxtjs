@@ -1,13 +1,15 @@
 <template>
   <nuxt-link
-      :to="{ path: `/jobs/${item.title}`, params:{slug:item.title} }"
+      to="/jobs"
       class="vacancy"
 
   >
-    <div class="vacancy__box-title ">
+    <div class="vacancy__box-title">
       <h3 class="vacancy__title">{{ item.title }}</h3>
       <span class="vacancy__salary">Salary: {{ item.min }}$-{{ item.max }}$</span>
+
     </div>
+
     <div class="vacancy__box">
       <div class="vacancy__inner-box">
         <div class="logo-img">
@@ -15,10 +17,10 @@
         </div>
         <div class="">
           <h4 class="vacancy__inner-title">Google Inc.</h4>
-          <!--          <div class="vacancy__address">-->
-          <!--            <img src="/icons/fi_map-pin.svg" alt="" class="w-[12px]"/>-->
-          <!--            <p class="ml-1">Dhaka, Bangladesh</p>-->
-          <!--          </div>-->
+          <div class="vacancy__address">
+            <img src="/icons/fi_map-pin.svg" alt="" class="w-[12px]"/>
+            <p class="ml-1">Dhaka, Bangladesh</p>
+          </div>
         </div>
       </div>
       <img class="vacancy__bookmark" src="/icons/BookmarkSimple.svg" alt=""/>
